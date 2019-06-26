@@ -74,7 +74,7 @@
 		660598F122C3BD6200F97110 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		660598F322C3BD6600F97110 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		660598F522C3BE9600F97110 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		660598FB22C3BF9F00F97110 /* liblibcolorpicker_dylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibcolorpicker_dylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibcolorpicker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6605991222C3C1D500F97110 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			children = (
 				66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */,
 				66ACAC6122C3BBB300B5C2B3 /* LCPExampleApp.app */,
-				660598FB22C3BF9F00F97110 /* liblibcolorpicker_dylib.dylib */,
+				660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		660598FA22C3BF9F00F97110 /* libcolorpicker_dylib */ = {
+		660598FA22C3BF9F00F97110 /* libcolorpicker_dynamic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dylib" */;
+			buildConfigurationList = 6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dynamic" */;
 			buildPhases = (
 				660598F722C3BF9F00F97110 /* Headers */,
 				660598F822C3BF9F00F97110 /* Sources */,
@@ -263,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = libcolorpicker_dylib;
+			name = libcolorpicker_dynamic;
 			productName = libcolorpicker_dylib;
-			productReference = 660598FB22C3BF9F00F97110 /* liblibcolorpicker_dylib.dylib */;
+			productReference = 660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker */ = {
+		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker" */;
+			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_static" */;
 			buildPhases = (
 				66ACAC1822C2C23100B5C2B3 /* Sources */,
 				66ACAC1922C2C23100B5C2B3 /* Frameworks */,
@@ -280,7 +280,7 @@
 			);
 			dependencies = (
 			);
-			name = libcolorpicker;
+			name = libcolorpicker_static;
 			productName = libcolorpicker;
 			productReference = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */;
 			productType = "com.apple.product-type.library.static";
@@ -336,9 +336,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66ACAC1B22C2C23100B5C2B3 /* libcolorpicker */,
+				66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */,
 				66ACAC6022C3BBB300B5C2B3 /* LCPExampleApp */,
-				660598FA22C3BF9F00F97110 /* libcolorpicker_dylib */,
+				660598FA22C3BF9F00F97110 /* libcolorpicker_dynamic */,
 			);
 		};
 /* End PBXProject section */
@@ -411,7 +411,7 @@
 /* Begin PBXTargetDependency section */
 		660598E822C3BC6D00F97110 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker */;
+			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */;
 			targetProxy = 660598E722C3BC6D00F97110 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,7 +445,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -460,7 +460,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -585,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = libcolorpicker;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -598,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = libcolorpicker;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -643,7 +643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dylib" */ = {
+		6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6605990222C3BF9F00F97110 /* Debug */,
@@ -661,7 +661,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker" */ = {
+		66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66ACAC2622C2C23100B5C2B3 /* Debug */,
