@@ -74,7 +74,7 @@
 		660598F122C3BD6200F97110 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		660598F322C3BD6600F97110 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		660598F522C3BE9600F97110 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibcolorpicker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcolorpicker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6605991222C3C1D500F97110 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			children = (
 				66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */,
 				66ACAC6122C3BBB300B5C2B3 /* LCPExampleApp.app */,
-				660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */,
+				660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			);
 			name = libcolorpicker_dynamic;
 			productName = libcolorpicker_dylib;
-			productReference = 660598FB22C3BF9F00F97110 /* liblibcolorpicker.dylib */;
+			productReference = 660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */ = {
@@ -443,7 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
@@ -458,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
