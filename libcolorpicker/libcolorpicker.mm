@@ -170,30 +170,97 @@ UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *f
     }
 }
 
-UIColor *LCPParseColorString(NSString *colorStringFromPrefs, NSString *colorStringFallback) {
-    //fallback
-    UIColor *fallbackColor = colorFromHex(colorStringFallback);
-    CGFloat currentAlpha = 1.0f;
-
-    if (colorStringFromPrefs && colorStringFromPrefs.length > 0) {
-        NSString *value = colorStringFromPrefs;
-        if (!value || value.length == 0)
-            return fallbackColor;
-
-        NSArray *colorAndOrAlpha = [value componentsSeparatedByString:@":"];
-        if ([value rangeOfString:@":"].location != NSNotFound) {
-            if ([colorAndOrAlpha objectAtIndex:1])
-                currentAlpha = [colorAndOrAlpha[1] floatValue];
-            else
-                currentAlpha = 1.0f;
+NSArray *_LCPGroupsFromMatch(NSTextCheckingResult *matchResult, NSString *originalString) {
+    NSMutableArray *matches = [NSMutableArray array];
+    
+    if (matchResult && originalString) {
+        for (int i=0; i < matchResult.numberOfRanges; i++) {
+            NSRange matchRange = [matchResult rangeAtIndex:i];
+            if (matchRange.location == NSNotFound) continue;
+            
+            NSString *matchStr = [originalString substringWithRange:matchRange];
+            
+            [matches addObject:matchStr];
         }
-
-        if (!value)
-            return fallbackColor;
-
-        NSString *color = colorAndOrAlpha[0];
-        return [colorFromHex(color) colorWithAlphaComponent:currentAlpha];
-    } else {
-        return fallbackColor;
     }
+    
+    return matches;
+}
+
+UIColor *_LCPParseHex(NSString *stringContainingHex) {
+    
+    UIColor *parsedColor = nil;
+    
+    if (!stringContainingHex) return parsedColor;
+    
+    NSError *err;
+    // ((?:#|^)((?:(?:[A-Fa-f]|\d){3}){1,2})(?::((?:\d|\.)+))?)
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"((?:#|^)((?:(?:[A-Fa-f]|\\d){3}){1,2})(?::((?:\\d|\\.)+))?)" options:0 error:&err];
+    
+    if (err)
+        NSLog(@"REGEX ERR: %@", err.localizedDescription);
+    
+    if (regex) {
+        NSTextCheckingResult *match = [regex firstMatchInString:stringContainingHex options:0 range:NSMakeRange(0, stringContainingHex.length)];
+        
+        if (!match) return parsedColor;
+        
+        NSArray *matches = _LCPGroupsFromMatch(match, stringContainingHex);
+        
+        NSString *hexString;
+        
+        if (matches.count == 3 || matches.count == 4) {
+            // Hex code
+            hexString = matches[2];
+        }
+        
+        float alphaValue = 1.0f;
+        if (matches.count == 4 && hexString) {
+            // Handle alpha
+            
+            NSScanner *scanner = [NSScanner scannerWithString:matches[3]];
+            if (!([scanner scanFloat:&alphaValue] && [scanner isAtEnd])) {
+                alphaValue = 1.0f;
+            }
+        }
+        
+        // Make UIColor from hex
+        parsedColor = colorFromHex(hexString);
+        parsedColor = [parsedColor colorWithAlphaComponent:alphaValue];
+    }
+    
+    return parsedColor;
+}
+
+UIColor *LCPParseColorString(NSString *colorStringFromPrefs, NSString *colorStringFallback) {
+    UIColor *color = _LCPParseHex(colorStringFromPrefs);
+    if (!color)
+        color = _LCPParseHex(colorStringFallback);
+    
+    return color;
+    //fallback
+    //    UIColor *fallbackColor = colorFromHex(colorStringFallback);
+    //    CGFloat currentAlpha = 1.0f;
+    //
+    //    if (colorStringFromPrefs && colorStringFromPrefs.length > 0) {
+    //        NSString *value = colorStringFromPrefs;
+    //        if (!value || value.length == 0)
+    //            return fallbackColor;
+    //
+    //        NSArray *colorAndOrAlpha = [value componentsSeparatedByString:@":"];
+    //        if ([value rangeOfString:@":"].location != NSNotFound) {
+    //            if ([colorAndOrAlpha objectAtIndex:1])
+    //                currentAlpha = [colorAndOrAlpha[1] floatValue];
+    //            else
+    //                currentAlpha = 1.0f;
+    //        }
+    //
+    //        if (!value)
+    //            return fallbackColor;
+    //
+    //        NSString *color = colorAndOrAlpha[0];
+    //        return [colorFromHex(color) colorWithAlphaComponent:currentAlpha];
+    //    } else {
+    //        return fallbackColor;
+    //    }
 }

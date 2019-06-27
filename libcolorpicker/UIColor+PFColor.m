@@ -26,10 +26,8 @@ UIColor *colorFromHex(NSString *hexString);
 }
 
 + (NSString *)hexFromColor:(UIColor *)color {
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    CGFloat r = components[0];
-    CGFloat g = components[1];
-    CGFloat b = components[2];
+    CGFloat r, g, b;
+    [color getRed:&r green:&g blue:&b alpha:nil];
     return [NSString stringWithFormat:@"#%02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
 }
 
