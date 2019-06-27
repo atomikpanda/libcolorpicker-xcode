@@ -142,6 +142,7 @@ UIColor *colorFromHex(NSString *hexString) {
 }
 
 // do not use this method anymore
+__attribute__((deprecated))
 UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *fallback) {
     NSMutableDictionary *preferencesPlist = [NSMutableDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/var/mobile/Library/Preferences/%@.plist", defaults]];
     //fallback

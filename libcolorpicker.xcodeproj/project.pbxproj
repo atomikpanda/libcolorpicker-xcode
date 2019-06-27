@@ -36,6 +36,9 @@
 		6657C53C22C45345002ADB41 /* PFColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */; };
 		6657C53D22C45428002ADB41 /* PFColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */; };
 		6657C53E22C45430002ADB41 /* PFColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */; };
+		6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C54B22C547CA002ADB41 /* PublicTests.m */; };
+		6657C54E22C547CA002ADB41 /* libcolorpicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */; };
+		6657C55422C548BD002ADB41 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6605991222C3C1D500F97110 /* libc++.1.tbd */; };
 		66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */; };
 		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */; };
@@ -63,6 +66,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 66ACAC1B22C2C23100B5C2B3;
 			remoteInfo = libcolorpicker;
+		};
+		6657C54F22C547CA002ADB41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66ACAC1422C2C23100B5C2B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66ACAC1B22C2C23100B5C2B3;
+			remoteInfo = libcolorpicker_static;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -94,6 +104,9 @@
 		6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerViewController.m; sourceTree = "<group>"; };
 		6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFColorPickerBaseViewController.h; sourceTree = "<group>"; };
 		6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerBaseViewController.m; sourceTree = "<group>"; };
+		6657C54922C547CA002ADB41 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6657C54B22C547CA002ADB41 /* PublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicTests.m; sourceTree = "<group>"; };
+		6657C54D22C547CA002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
 		66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PFColor.m"; sourceTree = "<group>"; };
@@ -148,6 +161,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD126E9BBECA6E6B6DF87A7 /* Pods_libcolorpicker_dynamic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6657C54622C547CA002ADB41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6657C55422C548BD002ADB41 /* libc++.1.tbd in Frameworks */,
+				6657C54E22C547CA002ADB41 /* libcolorpicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +291,15 @@
 			name = "Public Headers";
 			sourceTree = "<group>";
 		};
+		6657C54A22C547CA002ADB41 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6657C54B22C547CA002ADB41 /* PublicTests.m */,
+				6657C54D22C547CA002ADB41 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		66ACAC1322C2C23100B5C2B3 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +307,7 @@
 				66ACAC1E22C2C23100B5C2B3 /* libcolorpicker */,
 				66ACAC6222C3BBB300B5C2B3 /* LCPExampleApp */,
 				660598FC22C3BF9F00F97110 /* libcolorpicker_dylib */,
+				6657C54A22C547CA002ADB41 /* Tests */,
 				66ACAC1D22C2C23100B5C2B3 /* Products */,
 				660598E922C3BC7200F97110 /* Frameworks */,
 				8B4E3A4FAC3BE0397205F5AA /* Pods */,
@@ -288,6 +320,7 @@
 				66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */,
 				66ACAC6122C3BBB300B5C2B3 /* LCPExampleApp.app */,
 				660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */,
+				6657C54922C547CA002ADB41 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -372,6 +405,24 @@
 			productReference = 660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		6657C54822C547CA002ADB41 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				6657C54522C547CA002ADB41 /* Sources */,
+				6657C54622C547CA002ADB41 /* Frameworks */,
+				6657C54722C547CA002ADB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6657C55022C547CA002ADB41 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 6657C54922C547CA002ADB41 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_static" */;
@@ -422,6 +473,9 @@
 					660598FA22C3BF9F00F97110 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					6657C54822C547CA002ADB41 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					66ACAC1B22C2C23100B5C2B3 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -446,11 +500,19 @@
 				66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */,
 				66ACAC6022C3BBB300B5C2B3 /* LCPExampleApp */,
 				660598FA22C3BF9F00F97110 /* libcolorpicker_dynamic */,
+				6657C54822C547CA002ADB41 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6657C54722C547CA002ADB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66ACAC5F22C3BBB300B5C2B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,6 +636,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6657C54522C547CA002ADB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66ACAC1822C2C23100B5C2B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,6 +681,11 @@
 			isa = PBXTargetDependency;
 			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */;
 			targetProxy = 660598E722C3BC6D00F97110 /* PBXContainerItemProxy */;
+		};
+		6657C55022C547CA002ADB41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */;
+			targetProxy = 6657C54F22C547CA002ADB41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -663,6 +738,48 @@
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6657C55222C547CA002ADB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixelfiredev.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6657C55322C547CA002ADB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixelfiredev.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -864,6 +981,15 @@
 			buildConfigurations = (
 				6605990222C3BF9F00F97110 /* Debug */,
 				6605990322C3BF9F00F97110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6657C55222C547CA002ADB41 /* Debug */,
+				6657C55322C547CA002ADB41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
