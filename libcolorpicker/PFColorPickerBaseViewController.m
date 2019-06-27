@@ -64,6 +64,7 @@ blurView=_blurView;
     _sliderContainerStackView = [[UIStackView alloc] initForAutoLayout];
     _sliderContainerStackView.axis = UILayoutConstraintAxisVertical;
     _sliderContainerStackView.distribution = UIStackViewDistributionFill;
+    _sliderContainerStackView.spacing = 8.0f;
     
     _saturationSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:_startColor style:PFSliderBackgroundStyleSaturation];
     
@@ -121,7 +122,6 @@ blurView=_blurView;
         // Halo hue view constraints
         [_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
         [_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
-        //[_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeTop withInset:padding];
         [_haloView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_hexButton];
         [_haloView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:_haloView];
         
@@ -129,7 +129,6 @@ blurView=_blurView;
         [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
         [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
         [_sliderContainerStackView  autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_haloView withOffset:padding];
-        //[_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeBottom withInset:padding];
         
         // Preview view
         [_litePreviewView autoAlignAxis:ALAxisVertical toSameAxisOfView:_haloView];

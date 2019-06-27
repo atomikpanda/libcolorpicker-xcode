@@ -39,12 +39,22 @@
          // maybe post a notification here if you need to
      }];
 }
+
 - (IBAction)presentColorPickerExample:(UIButton *)sender {
     PFColorPickerViewController *controller = [[PFColorPickerViewController alloc] init];
     controller.startColor = [UIColor greenColor];
     controller.showAlpha = YES;
     
-    [self presentViewController:controller animated:YES completion:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+- (IBAction)pushColorPickerExample:(UIButton *)sender {
+    PFColorPickerViewController *controller = [[PFColorPickerViewController alloc] init];
+    controller.startColor = [UIColor greenColor];
+    controller.showAlpha = YES;
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

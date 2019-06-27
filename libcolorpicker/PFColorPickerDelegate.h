@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class PFColorAlertViewController;
+@class PFColorPickerViewController;
 @protocol PFColorPickerDelegate <NSObject>
 
-- (void)colorPicker:(PFColorAlertViewController *)colorAlertViewController didFinishWithColor:(UIColor *)color;
+- (void)colorPicker:(PFColorPickerViewController *)viewController didFinishWithColor:(UIColor *)color;
+- (void)colorPickerWasCancelled:(PFColorPickerViewController *)viewController;
 
 @end

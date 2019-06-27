@@ -7,11 +7,8 @@
 //
 
 #import "PFColorPickerBaseViewController.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "PFColorPickerDelegate.h"
 
 @interface PFColorPickerViewController : PFColorPickerBaseViewController
-
+@property (nonatomic, retain) id<PFColorPickerDelegate> delegate;
 @end
-
-NS_ASSUME_NONNULL_END

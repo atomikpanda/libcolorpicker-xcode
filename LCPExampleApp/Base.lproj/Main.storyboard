@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IrS-Yp-Xks">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,21 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-uu-OFE">
-                                <rect key="frame" x="0.0" y="423" width="414" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-uu-OFE">
+                                <rect key="frame" x="0.0" y="414" width="414" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-HN-5lu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                        <state key="normal" title="Open Color Picker"/>
+                                        <state key="normal" title="Open Color Picker Alert"/>
                                         <connections>
                                             <action selector="openColorPickerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypw-c5-jfa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-dH-FK5">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="30"/>
-                                        <state key="normal" title="Present Controller"/>
+                                        <rect key="frame" x="0.0" y="46" width="414" height="30"/>
+                                        <state key="normal" title="Present Modally Controller"/>
                                         <connections>
                                             <action selector="presentColorPickerExample:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kQ-HS-VM2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl0-2E-qFD">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="30"/>
+                                        <state key="normal" title="Push Controller"/>
+                                        <connections>
+                                            <action selector="pushColorPickerExample:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oz8-LB-wOY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -46,9 +53,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pDr-jD-VS8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iOM-C3-x6K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IrS-Yp-Xks" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQm-Og-AK3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jld-Po-uHI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77f-gN-B8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="21"/>
         </scene>
     </scenes>
 </document>
