@@ -28,7 +28,7 @@
 
 
 @implementation PFColorAlertViewController
-@synthesize didSetupConstraints, startColor=_startColor, showAlpha;
+@synthesize didSetupConstraints=_didSetupConstraints, startColor=_startColor, showAlpha=_showAlpha;
 
 - (void)loadView {
     [super loadView];
@@ -91,9 +91,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _alphaSlider.hidden = !showAlpha;
-    self.view.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
 - (void)updateViewConstraints {
@@ -142,8 +139,17 @@
     return firstVisibleSlider.frame.origin.y + firstVisibleSlider.frame.size.height;
 }
 
+- (void)setShowAlpha:(BOOL)showAlpha {
+    _showAlpha = showAlpha;
+    
+    [self loadViewIfNeeded];
+    _alphaSlider.hidden = !_showAlpha;
+}
+
 - (void)setStartColor:(UIColor *)startColor {
     _startColor = startColor;
+    [self loadViewIfNeeded];
+    [self setPrimaryColor:_startColor];
 }
 
 - (void)setPrimaryColor:(UIColor *)primary {

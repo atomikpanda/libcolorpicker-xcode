@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "../libcolorpicker/libcolorpicker.h"
+#import "../libcolorpicker/PFColorAlertViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) PFColorAlert *alert;
@@ -37,6 +38,13 @@
          // you probably want to save hexString to your prefs
          // maybe post a notification here if you need to
      }];
+}
+- (IBAction)presentColorPickerExample:(UIButton *)sender {
+    PFColorAlertViewController *controller = [[PFColorAlertViewController alloc] init];
+    controller.startColor = [UIColor greenColor];
+    controller.showAlpha = YES;
+    
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

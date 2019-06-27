@@ -19,13 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-uu-OFE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="423" width="414" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-HN-5lu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-HN-5lu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                         <state key="normal" title="Open Color Picker"/>
                                         <connections>
                                             <action selector="openColorPickerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypw-c5-jfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-dH-FK5">
+                                        <rect key="frame" x="0.0" y="30" width="414" height="30"/>
+                                        <state key="normal" title="Present Controller"/>
+                                        <connections>
+                                            <action selector="presentColorPickerExample:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kQ-HS-VM2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -33,10 +40,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QWq-uu-OFE" secondAttribute="bottom" id="GwU-vt-gsn"/>
+                            <constraint firstItem="QWq-uu-OFE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OgF-Ul-xgJ"/>
                             <constraint firstItem="QWq-uu-OFE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P4k-JJ-Gzq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QWq-uu-OFE" secondAttribute="trailing" id="ZSe-4a-8sO"/>
-                            <constraint firstItem="QWq-uu-OFE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yCD-q8-PaI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
