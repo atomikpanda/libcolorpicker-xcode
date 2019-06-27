@@ -55,6 +55,9 @@
     color = LCPParseColorString(@"ioadisodu14", @"#A7A7A7");
     XCTAssertEqualObjects([UIColor hexFromColor:color], @"#A7A7A7");
     
+    color = LCPParseColorString(@"#zzzyyy", @"#B9B9B9");
+    XCTAssertEqualObjects([UIColor hexFromColor:color], @"#B9B9B9");
+    
     color = LCPParseColorString(@"AAAFFF:0.25", @"#A7A7A7");
     XCTAssertEqualObjects([UIColor hexFromColor:color], @"#AAAFFF");
     XCTAssertEqual([color alpha], 0.25);
