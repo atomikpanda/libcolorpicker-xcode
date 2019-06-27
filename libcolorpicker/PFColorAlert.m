@@ -2,7 +2,7 @@
 #import "PFColorAlertViewController.h"
 #import "UIColor+PFColor.h"
 #import <objc/runtime.h>
-
+#import <PureLayout/PureLayout.h>
 
 
 @interface PFColorAlert()
@@ -37,14 +37,26 @@
 
     winFrame.size.width = winFrame.size.width - winWidthCalc;
     winFrame.size.height = winFrame.size.height - winHeightCalc;
-
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        CGFloat topPadding = window.safeAreaInsets.top;
+        CGFloat bottomPadding = window.safeAreaInsets.bottom;
+        CGFloat leftPadding = window.safeAreaInsets.left;
+        CGFloat rightPadding = window.safeAreaInsets.right;
+        winFrame.size.height -= topPadding;
+        winFrame.size.height -= bottomPadding;
+        winFrame.size.width -= leftPadding;
+        winFrame.size.width -= rightPadding;
+    }
+    
     self.popWindow = [[UIWindow alloc] initWithFrame:winFrame];
     self.popWindow.layer.masksToBounds = true;
     self.popWindow.layer.cornerRadius = 15;
 
-    self.mainViewController = [[PFColorAlertViewController alloc] initWithViewFrame:CGRectMake(0, 0, winFrame.size.width, winFrame.size.height)
-                                                                         startColor:startColor
-                                                                          showAlpha:showAlpha];
+    self.mainViewController = [[PFColorAlertViewController alloc] init];
+    self.mainViewController.startColor = startColor;
+    self.mainViewController.showAlpha = showAlpha;
 
     self.darkeningWindow.hidden = NO;
     self.darkeningWindow.alpha = 0.0f;
@@ -70,10 +82,12 @@
 
 - (void)makeViewDynamic:(UIView *)view {
     CGRect dynamicFrame = view.frame;
-    dynamicFrame.size.height = [self.mainViewController topMostSliderLastYCoordinate] +
-                               self.mainViewController.view.frame.size.width / 6;
+//    dynamicFrame.size.height = [self.mainViewController topMostSliderLastYCoordinate] +
+//                               self.mainViewController.view.frame.size.width / 6;
 
+    dynamicFrame.size = self.mainViewController.view.bounds.size;
     view.frame = dynamicFrame;
+   
 }
 
 - (void)displayWithCompletion:(void (^)(UIColor *pickedColor))completionBlock {

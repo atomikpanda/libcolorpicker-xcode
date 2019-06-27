@@ -1,5 +1,6 @@
 #import "PFColorLiteSlider.h"
 #import "UIColor+PFColor.h"
+#import <PureLayout/PureLayout.h>
 
 @interface PFColorSliderBackgroundView : UIView
 @property (nonatomic, retain) UIColor *color;
@@ -41,25 +42,25 @@
 @interface PFColorLiteSlider ()
 @property (nonatomic, retain) PFColorSliderBackgroundView *backgroundView;
 @property (assign) PFSliderBackgroundStyle style;
+@property (nonatomic, assign) BOOL didSetupConstraints;
 @end
 
 @implementation PFColorLiteSlider
 @synthesize backgroundView;
 @synthesize slider;
+@synthesize didSetupConstraints;
 
 - (id)initWithFrame:(CGRect)frame color:(UIColor *)c style:(PFSliderBackgroundStyle)s {
     self = [super initWithFrame:frame];
 
-    CGRect internalFrame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-
     self.style = s;
 
-    self.slider = [[UISlider alloc] initWithFrame:internalFrame];
+    self.slider = [[UISlider alloc] initForAutoLayout];
     self.slider.minimumValue = 0.0000001f;
     self.slider.maximumValue = 1.0;
-    internalFrame.size.height = 10; // set to ten because we want a thin BG
-    internalFrame.origin.y = ((frame.size.height - 10) / 2);
-    self.backgroundView = [[PFColorSliderBackgroundView alloc] initWithFrame:internalFrame color:c style:s];
+    
+
+    self.backgroundView = [[PFColorSliderBackgroundView alloc] initWithFrame:frame color:c style:s];
 
     [self addSubview:self.backgroundView];
     [self addSubview:self.slider];
@@ -67,6 +68,17 @@
     [self updateGraphicsWithColor:c];
 
     return self;
+}
+
+- (void)updateConstraints {
+    
+    if (!self.didSetupConstraints) {
+        [self.backgroundView autoPinEdgesToSuperviewMarginsWithInsets:UIEdgeInsetsMake(2, 2, 2, 2)];
+        [self.slider autoPinEdgesToSuperviewEdges];
+        self.didSetupConstraints = YES;
+    }
+    
+    [super updateConstraints];
 }
 
 - (void)updateGraphicsWithColor:(UIColor *)color {

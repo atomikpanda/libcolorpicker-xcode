@@ -81,7 +81,7 @@
 		660598F522C3BE9600F97110 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcolorpicker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6605991222C3C1D500F97110 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
-		6605991422C3D9B100F97110 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		6605991422C3D9B100F97110 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
 		66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PFColor.m"; sourceTree = "<group>"; };

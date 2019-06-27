@@ -155,7 +155,6 @@
         [cell stroke];
         CGContextRotateCTM(context, -incr);
     }
-    // ---
 }
 
 @end

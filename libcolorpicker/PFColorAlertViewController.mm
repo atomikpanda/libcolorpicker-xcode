@@ -3,6 +3,7 @@
 #import "PFColorLitePreviewView.h"
 #import "PFColorLiteSlider.h"
 #import "UIColor+PFColor.h"
+#import <PureLayout/PureLayout.h>
 
 @interface PFColorAlertViewController () <PFHaloHueViewDelegate> { 
     PFHaloHueView *_haloView;
@@ -11,8 +12,10 @@
     PFColorLiteSlider *_brightnessSlider;
     PFColorLiteSlider *_saturationSlider;
     PFColorLiteSlider *_alphaSlider;
+    UIStackView *_sliderContainerStackView;
     PFColorLitePreviewView *_litePreviewView;   
 }
+@property (nonatomic, assign) BOOL didSetupConstraints;
 @end
 
 @interface _UIBackdropViewSettings : NSObject
@@ -25,75 +28,113 @@
 
 
 @implementation PFColorAlertViewController
+@synthesize didSetupConstraints, startColor, showAlpha;
 
-- (id)initWithViewFrame:(CGRect)frame startColor:(UIColor *)startColor showAlpha:(BOOL)showAlpha {
-    self = [super init];
-
-    self.view.frame = frame;
-
+- (void)loadView {
+    [super loadView];
+    
+    // Add subviews
+    
+    // Blur view
     if (NSClassFromString(@"_UIBackdropView")) {
+        // TODO: replace with UIVisualEffectView if available
         _UIBackdropViewSettings *backSettings = [NSClassFromString(@"_UIBackdropViewSettings") settingsForStyle:2010];
         _blurView = [[NSClassFromString(@"_UIBackdropView") alloc] initWithFrame:CGRectZero autosizesToFitSuperview:YES settings:backSettings];
     } else {
-        _blurView = [[UIView alloc] initWithFrame:frame];
         _blurView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9f];
     }
-
+    
+    [_blurView configureForAutoLayout];
     [self.view addSubview:_blurView];
-
-    float padding = frame.size.width / 6;
-    float width = frame.size.width - padding * 2;
-    CGRect haloViewFrame = CGRectMake(padding, padding, width, width);
-
-    _haloView = [[PFHaloHueView alloc] initWithFrame:haloViewFrame minValue:0 maxValue:1 value:startColor.hue delegate:self];
+    
+    // Halo view
+    _haloView = [[PFHaloHueView alloc] initWithFrame:CGRectZero minValue:0 maxValue:1 value:0 delegate:self];
+    _haloView = [_haloView configureForAutoLayout];
     [self.view addSubview:_haloView];
-
-    const CGRect sliderFrame = CGRectMake(padding,
-                                          haloViewFrame.origin.y + haloViewFrame.size.height,
-                                          width,
-                                          40);
-
-    _saturationSlider = [[PFColorLiteSlider alloc] initWithFrame:sliderFrame color:startColor style:PFSliderBackgroundStyleSaturation];
-    [self.view addSubview:_saturationSlider];
-
-    CGRect brightnessSliderFrame = sliderFrame;
-    brightnessSliderFrame.origin.y = brightnessSliderFrame.origin.y + brightnessSliderFrame.size.height;
-
-    _brightnessSlider = [[PFColorLiteSlider alloc] initWithFrame:brightnessSliderFrame color:startColor style:PFSliderBackgroundStyleBrightness];
-    [self.view addSubview:_brightnessSlider];
-
-    CGRect alphaSliderFrame = brightnessSliderFrame;
-    alphaSliderFrame.origin.y = alphaSliderFrame.origin.y + alphaSliderFrame.size.height;
-
-    _alphaSlider = [[PFColorLiteSlider alloc] initWithFrame:alphaSliderFrame color:startColor style:PFSliderBackgroundStyleAlpha];
-    [self.view addSubview:_alphaSlider];
-
+    
+    // Sliders
+    _sliderContainerStackView = [[UIStackView alloc] initForAutoLayout];
+    _sliderContainerStackView.axis = UILayoutConstraintAxisVertical;
+    _sliderContainerStackView.distribution = UIStackViewDistributionFill;
+    
+    _saturationSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleSaturation];
+    
+    _brightnessSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleBrightness];
+    
+    _alphaSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleAlpha];
+    
+    [_saturationSlider.slider addTarget:self action:@selector(saturationChanged:) forControlEvents:UIControlEventValueChanged];
+    [_brightnessSlider.slider addTarget:self action:@selector(brightnessChanged:) forControlEvents:UIControlEventValueChanged];
+    [_alphaSlider.slider addTarget:self action:@selector(alphaChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    [_sliderContainerStackView addArrangedSubview:_saturationSlider];
+    [_sliderContainerStackView addArrangedSubview:_brightnessSlider];
+    [_sliderContainerStackView addArrangedSubview:_alphaSlider];
+    [self.view addSubview:_sliderContainerStackView];
+    
+    // Preview view
+    _litePreviewView = [[PFColorLitePreviewView alloc] initWithFrame:CGRectZero
+                                                           mainColor:startColor
+                                                       previousColor:startColor];
+    [self.view addSubview:_litePreviewView];
+    
+    // Hex button
     _hexButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_hexButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_hexButton addTarget:self action:@selector(chooseHexColor) forControlEvents:UIControlEventTouchUpInside];
     [_hexButton setTitle:@"#" forState:UIControlStateNormal];
-    _hexButton.frame = CGRectMake(self.view.frame.size.width - (25 + 10), 10, 25, 25);
     [self.view addSubview:_hexButton];
+    
+    // Tell auto layout to update
+    [self.view setNeedsUpdateConstraints];
+}
 
-    float halfWidth = frame.size.width / 2;
-    CGRect litePreviewViewFrame = CGRectMake(halfWidth - padding,
-                                             haloViewFrame.origin.y + haloViewFrame.size.height - halfWidth,
-                                             padding * 2,
-                                             padding * 2);
-
-    _litePreviewView = [[PFColorLitePreviewView alloc] initWithFrame:litePreviewViewFrame
-                                                           mainColor:startColor
-                                                       previousColor:startColor];
-    [self.view addSubview:_litePreviewView];
-
-
-    [_saturationSlider.slider addTarget:self action:@selector(saturationChanged:) forControlEvents:UIControlEventValueChanged];
-    [_brightnessSlider.slider addTarget:self action:@selector(brightnessChanged:) forControlEvents:UIControlEventValueChanged];
-    [_alphaSlider.slider addTarget:self action:@selector(alphaChanged:) forControlEvents:UIControlEventValueChanged];
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
     _alphaSlider.hidden = !showAlpha;
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+}
 
-    return self;
+- (void)updateViewConstraints {
+    if (!self.didSetupConstraints) {
+        
+        float padding = 32.0f;
+        // Update auto layout contraints
+        
+        // Blur view constraints
+        [_blurView autoPinEdgeToSuperviewEdge:ALEdgeTop];
+        [_blurView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+        [_blurView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+        [_blurView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:_sliderContainerStackView withOffset:padding];
+        
+        // Hex button
+        [_hexButton autoPinEdgeToSuperviewSafeArea:ALEdgeTop withInset:padding];
+        [_hexButton autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
+        [_hexButton autoSetDimension:ALDimensionHeight toSize:[_hexButton intrinsicContentSize].height];
+        
+        // Halo hue view constraints
+        [_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
+        [_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
+        //[_haloView autoPinEdgeToSuperviewSafeArea:ALEdgeTop withInset:padding];
+        [_haloView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_hexButton];
+        [_haloView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:_haloView];
+        
+        // Slider constraints
+        [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
+        [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
+        [_sliderContainerStackView  autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_haloView withOffset:padding];
+        //[_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeBottom withInset:padding];
+        
+        // Preview view
+        [_litePreviewView autoAlignAxis:ALAxisVertical toSameAxisOfView:_haloView];
+        [_litePreviewView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_haloView];
+        [_litePreviewView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:_haloView withMultiplier:0.4];
+        [_litePreviewView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:_haloView withMultiplier:0.4];
+        
+        self.didSetupConstraints = YES;
+    }
+    [super updateViewConstraints];
 }
 
 - (float)topMostSliderLastYCoordinate {
@@ -108,8 +149,6 @@
     [_brightnessSlider updateGraphicsWithColor:primary];
     [_alphaSlider updateGraphicsWithColor:primary];
 
-    // THIS LINE SHOULD BE ACTIVE BUT DISABLED IT FOR NOW
-    // UNTIL WE CAN GET THE HUE SLIDER WORKING
     [_haloView setValue:primary.hue];
 }
 
