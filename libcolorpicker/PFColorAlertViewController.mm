@@ -13,7 +13,7 @@
     PFColorLiteSlider *_saturationSlider;
     PFColorLiteSlider *_alphaSlider;
     UIStackView *_sliderContainerStackView;
-    PFColorLitePreviewView *_litePreviewView;   
+    PFColorLitePreviewView *_litePreviewView;
 }
 @property (nonatomic, assign) BOOL didSetupConstraints;
 @end
@@ -28,7 +28,7 @@
 
 
 @implementation PFColorAlertViewController
-@synthesize didSetupConstraints, startColor, showAlpha;
+@synthesize didSetupConstraints, startColor=_startColor, showAlpha;
 
 - (void)loadView {
     [super loadView];
@@ -57,11 +57,11 @@
     _sliderContainerStackView.axis = UILayoutConstraintAxisVertical;
     _sliderContainerStackView.distribution = UIStackViewDistributionFill;
     
-    _saturationSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleSaturation];
+    _saturationSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:_startColor style:PFSliderBackgroundStyleSaturation];
     
-    _brightnessSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleBrightness];
+    _brightnessSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:_startColor style:PFSliderBackgroundStyleBrightness];
     
-    _alphaSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:startColor style:PFSliderBackgroundStyleAlpha];
+    _alphaSlider = [[PFColorLiteSlider alloc] initWithFrame:CGRectZero color:_startColor style:PFSliderBackgroundStyleAlpha];
     
     [_saturationSlider.slider addTarget:self action:@selector(saturationChanged:) forControlEvents:UIControlEventValueChanged];
     [_brightnessSlider.slider addTarget:self action:@selector(brightnessChanged:) forControlEvents:UIControlEventValueChanged];
@@ -74,8 +74,8 @@
     
     // Preview view
     _litePreviewView = [[PFColorLitePreviewView alloc] initWithFrame:CGRectZero
-                                                           mainColor:startColor
-                                                       previousColor:startColor];
+                                                           mainColor:_startColor
+                                                       previousColor:_startColor];
     [self.view addSubview:_litePreviewView];
     
     // Hex button
@@ -140,6 +140,10 @@
 - (float)topMostSliderLastYCoordinate {
     UIView *firstVisibleSlider = !_alphaSlider.hidden ? _alphaSlider : _brightnessSlider;
     return firstVisibleSlider.frame.origin.y + firstVisibleSlider.frame.size.height;
+}
+
+- (void)setStartColor:(UIColor *)startColor {
+    _startColor = startColor;
 }
 
 - (void)setPrimaryColor:(UIColor *)primary {
