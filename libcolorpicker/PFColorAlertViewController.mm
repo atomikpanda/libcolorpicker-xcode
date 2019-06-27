@@ -28,7 +28,8 @@
 
 
 @implementation PFColorAlertViewController
-@synthesize didSetupConstraints=_didSetupConstraints, startColor=_startColor, showAlpha=_showAlpha;
+@synthesize didSetupConstraints=_didSetupConstraints, startColor=_startColor, showAlpha=_showAlpha,
+isEncapsulatedInAlert=_isEncapsulatedInAlert;
 
 - (void)loadView {
     [super loadView];
@@ -87,6 +88,11 @@
     
     // Tell auto layout to update
     [self.view setNeedsUpdateConstraints];
+    
+    if (!self.isEncapsulatedInAlert) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        _blurView.hidden = YES;
+    }
 }
 
 - (void)viewDidLoad {
