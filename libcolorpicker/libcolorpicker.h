@@ -4,7 +4,8 @@
 extern "C" {
 #endif
 UIColor *LCPParseColorString(NSString *colorStringFromPrefs, NSString *colorStringFallback);
-//old DONT USE
+
+__attribute__((deprecated))
 UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *fallback);
 
 #ifdef __cplusplus /* If this is a C++ compiler, end C linkage */

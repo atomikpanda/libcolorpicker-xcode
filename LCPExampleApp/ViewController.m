@@ -10,7 +10,7 @@
 #import "../libcolorpicker/libcolorpicker.h"
 #import "../libcolorpicker/PFColorPickerViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <PFColorPickerDelegate>
 @property (nonatomic, strong) PFColorAlert *alert;
 @end
 
@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 }
 
 - (IBAction)openColorPickerTapped:(UIButton *)sender {
@@ -44,6 +43,7 @@
     PFColorPickerViewController *controller = [[PFColorPickerViewController alloc] init];
     controller.startColor = [UIColor greenColor];
     controller.showAlpha = YES;
+    controller.delegate = self;
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
     [self presentViewController:navController animated:YES completion:nil];
@@ -53,8 +53,17 @@
     PFColorPickerViewController *controller = [[PFColorPickerViewController alloc] init];
     controller.startColor = [UIColor greenColor];
     controller.showAlpha = YES;
+    controller.delegate = self;
     
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)colorPicker:(PFColorPickerViewController *)viewController didFinishWithColor:(UIColor *)color {
+    self.view.backgroundColor = color;
+}
+
+- (void)colorPickerWasCancelled:(PFColorPickerViewController *)viewController {
+    NSLog(@"Cancelled");
 }
 
 @end

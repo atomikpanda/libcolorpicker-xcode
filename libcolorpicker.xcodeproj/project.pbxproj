@@ -199,6 +199,76 @@
 			path = libcolorpicker_dylib;
 			sourceTree = "<group>";
 		};
+		6657C53F22C53573002ADB41 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */,
+				6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */,
+				66ACAC4D22C3BA7800B5C2B3 /* PFColorAlertViewController.h */,
+				66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */,
+				6657C53522C4531C002ADB41 /* PFColorPickerViewController.h */,
+				6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */,
+				66ACAC3F22C3BA7700B5C2B3 /* PFColorViewController.h */,
+				66ACAC4422C3BA7700B5C2B3 /* PFColorViewController.mm */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6657C54022C5359F002ADB41 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				66ACAC3822C3BA7600B5C2B3 /* PFColorLitePreviewView.h */,
+				66ACAC4622C3BA7700B5C2B3 /* PFColorLitePreviewView.m */,
+				66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */,
+				66ACAC4122C3BA7700B5C2B3 /* PFColorLiteSlider.m */,
+				66ACAC3622C3BA7600B5C2B3 /* PFColorPicker.h */,
+				66ACAC4B22C3BA7700B5C2B3 /* PFColorPicker.m */,
+				66ACAC4722C3BA7700B5C2B3 /* PFColorTransparentView.h */,
+				66ACAC4822C3BA7700B5C2B3 /* PFColorTransparentView.m */,
+				66ACAC3922C3BA7700B5C2B3 /* PFHaloHueView.h */,
+				66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */,
+				66ACAC3522C3BA7600B5C2B3 /* PFHaloKnobView.h */,
+				66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		6657C54122C535E9002ADB41 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */,
+				66ACAC3B22C3BA7700B5C2B3 /* PFLiteColorCell.mm */,
+				66ACAC3E22C3BA7700B5C2B3 /* PFSimpleLiteColorCell.mm */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		6657C54222C53602002ADB41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66ACAC4922C3BA7700B5C2B3 /* UIColor+PFColor.h */,
+				66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6657C54322C53635002ADB41 /* Private Internal Headers */ = {
+			isa = PBXGroup;
+			children = (
+				66ACAC3722C3BA7600B5C2B3 /* PSSpecifier.h */,
+				66ACAC4A22C3BA7700B5C2B3 /* PSTableCell.h */,
+			);
+			name = "Private Internal Headers";
+			sourceTree = "<group>";
+		};
+		6657C54422C53656002ADB41 /* Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				66ACAC4022C3BA7700B5C2B3 /* libcolorpicker.h */,
+			);
+			name = "Public Headers";
+			sourceTree = "<group>";
+		};
 		66ACAC1322C2C23100B5C2B3 = {
 			isa = PBXGroup;
 			children = (
@@ -225,38 +295,16 @@
 		66ACAC1E22C2C23100B5C2B3 /* libcolorpicker */ = {
 			isa = PBXGroup;
 			children = (
-				66ACAC4022C3BA7700B5C2B3 /* libcolorpicker.h */,
+				6657C54422C53656002ADB41 /* Public Headers */,
 				66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */,
 				66ACAC4522C3BA7700B5C2B3 /* PFColorAlert.h */,
 				66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */,
 				6657C53322C451A1002ADB41 /* PFColorPickerDelegate.h */,
-				6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */,
-				6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */,
-				66ACAC4D22C3BA7800B5C2B3 /* PFColorAlertViewController.h */,
-				66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */,
-				6657C53522C4531C002ADB41 /* PFColorPickerViewController.h */,
-				6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */,
-				66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */,
-				66ACAC3822C3BA7600B5C2B3 /* PFColorLitePreviewView.h */,
-				66ACAC4622C3BA7700B5C2B3 /* PFColorLitePreviewView.m */,
-				66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */,
-				66ACAC4122C3BA7700B5C2B3 /* PFColorLiteSlider.m */,
-				66ACAC3622C3BA7600B5C2B3 /* PFColorPicker.h */,
-				66ACAC4B22C3BA7700B5C2B3 /* PFColorPicker.m */,
-				66ACAC4722C3BA7700B5C2B3 /* PFColorTransparentView.h */,
-				66ACAC4822C3BA7700B5C2B3 /* PFColorTransparentView.m */,
-				66ACAC3F22C3BA7700B5C2B3 /* PFColorViewController.h */,
-				66ACAC4422C3BA7700B5C2B3 /* PFColorViewController.mm */,
-				66ACAC3922C3BA7700B5C2B3 /* PFHaloHueView.h */,
-				66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */,
-				66ACAC3522C3BA7600B5C2B3 /* PFHaloKnobView.h */,
-				66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */,
-				66ACAC3B22C3BA7700B5C2B3 /* PFLiteColorCell.mm */,
-				66ACAC3E22C3BA7700B5C2B3 /* PFSimpleLiteColorCell.mm */,
-				66ACAC3722C3BA7600B5C2B3 /* PSSpecifier.h */,
-				66ACAC4A22C3BA7700B5C2B3 /* PSTableCell.h */,
-				66ACAC4922C3BA7700B5C2B3 /* UIColor+PFColor.h */,
-				66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */,
+				6657C53F22C53573002ADB41 /* View Controllers */,
+				6657C54022C5359F002ADB41 /* Custom Views */,
+				6657C54122C535E9002ADB41 /* Table Cells */,
+				6657C54322C53635002ADB41 /* Private Internal Headers */,
+				6657C54222C53602002ADB41 /* Extensions */,
 			);
 			path = libcolorpicker;
 			sourceTree = "<group>";
