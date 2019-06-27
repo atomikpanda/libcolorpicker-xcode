@@ -55,21 +55,26 @@
 
 - (void)dragged:(UIPanGestureRecognizer *)gesture {
     CGPoint touchLocation = [gesture locationInView:self];
-
+    
     // Gets the vector of the difference between the touch location and the knob center
     float touchVector[2] = {touchLocation.x - _knob.center.x, touchLocation.y - _knob.center.y};
-
+    
     // Gets a vector tangent to the circle at the center of the knob
     float tangentVector[2] = {_knob.center.y - _barCenter.y, _barCenter.x - _knob.center.x};
 
     // Calculates the scalar projection of the touch vector onto the tangent vector
     float scalarProj = (touchVector[0] * tangentVector[0] + touchVector[1] * tangentVector[1]) /
                        sqrt((tangentVector[0] * tangentVector[0]) + (tangentVector[1] * tangentVector[1]));
-
-    _knobAngle += scalarProj / _barRadius;
+    float newAngle = _knobAngle;
+    
+    newAngle += scalarProj / _barRadius;
 
     // Ensures _knobAngle is always between 0 and 2 pi
-    _knobAngle = fmodf(_knobAngle, 2 * M_PI);
+    newAngle = fmodf(newAngle, 2 * M_PI);
+    
+    // FIXME: stop the angle from jumping around when sliding finger far away from knob
+    
+    _knobAngle = newAngle;
 
     [self updateKnob];
 
