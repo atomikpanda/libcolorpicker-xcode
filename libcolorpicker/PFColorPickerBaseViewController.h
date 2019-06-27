@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PFColorPickerBaseViewController : UIViewController
 
+@property (nonatomic, strong) UIColor *startColor;
+@property (nonatomic, strong) UIView *blurView;
+@property (nonatomic, assign) BOOL showAlpha;
+- (void)setPrimaryColor:(UIColor *)primary;
+- (UIColor *)getColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

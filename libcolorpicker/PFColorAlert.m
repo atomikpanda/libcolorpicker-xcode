@@ -55,7 +55,6 @@
     self.popWindow.layer.cornerRadius = 15;
 
     self.mainViewController = [[PFColorAlertViewController alloc] init];
-    self.mainViewController.isEncapsulatedInAlert = YES;
     self.mainViewController.startColor = startColor;
     self.mainViewController.showAlpha = showAlpha;
 

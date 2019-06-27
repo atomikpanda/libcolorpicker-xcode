@@ -6,11 +6,11 @@
 //  Copyright © 2019 Bailey Seymour. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PFColorPickerBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PFColorPickerViewController : UIViewController
+@interface PFColorPickerViewController : PFColorPickerBaseViewController
 
 @end
 

@@ -1,12 +1,7 @@
 #import <UIKit/UIKit.h>
+#import "PFColorPickerBaseViewController.h"
 
-@interface PFColorAlertViewController : UIViewController
+@class PFColorPickerBaseViewController;
+@interface PFColorAlertViewController : PFColorPickerBaseViewController
 
-@property (nonatomic, strong) UIColor *startColor;
-@property (nonatomic, assign) BOOL showAlpha;
-@property (nonatomic, assign) BOOL isEncapsulatedInAlert;
-
-- (float)topMostSliderLastYCoordinate;
-- (void)setPrimaryColor:(UIColor *)primary;
-- (UIColor *)getColor;
 @end

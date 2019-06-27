@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "../libcolorpicker/libcolorpicker.h"
-#import "../libcolorpicker/PFColorAlertViewController.h"
+#import "../libcolorpicker/PFColorPickerViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) PFColorAlert *alert;
@@ -40,7 +40,7 @@
      }];
 }
 - (IBAction)presentColorPickerExample:(UIButton *)sender {
-    PFColorAlertViewController *controller = [[PFColorAlertViewController alloc] init];
+    PFColorPickerViewController *controller = [[PFColorPickerViewController alloc] init];
     controller.startColor = [UIColor greenColor];
     controller.showAlpha = YES;
     

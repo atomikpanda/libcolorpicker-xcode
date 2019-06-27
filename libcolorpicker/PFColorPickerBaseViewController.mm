@@ -1,13 +1,20 @@
-#import "PFColorAlertViewController.h"
+//
+//  PFColorPickerBaseViewController.m
+//  libcolorpicker_dynamic
+//
+//  Created by Bailey Seymour on 6/26/19.
+//  Copyright © 2019 Bailey Seymour. All rights reserved.
+//
+
+#import "PFColorPickerBaseViewController.h"
 #import "PFHaloHueView.h"
 #import "PFColorLitePreviewView.h"
 #import "PFColorLiteSlider.h"
 #import "UIColor+PFColor.h"
 #import <PureLayout/PureLayout.h>
 
-@interface PFColorAlertViewController () <PFHaloHueViewDelegate> { 
+@interface PFColorPickerBaseViewController () <PFHaloHueViewDelegate> {
     PFHaloHueView *_haloView;
-    UIView *_blurView;
     UIButton *_hexButton;
     PFColorLiteSlider *_brightnessSlider;
     PFColorLiteSlider *_saturationSlider;
@@ -27,9 +34,9 @@
 @end
 
 
-@implementation PFColorAlertViewController
+@implementation PFColorPickerBaseViewController
 @synthesize didSetupConstraints=_didSetupConstraints, startColor=_startColor, showAlpha=_showAlpha,
-isEncapsulatedInAlert=_isEncapsulatedInAlert;
+blurView=_blurView;
 
 - (void)loadView {
     [super loadView];
@@ -88,11 +95,6 @@ isEncapsulatedInAlert=_isEncapsulatedInAlert;
     
     // Tell auto layout to update
     [self.view setNeedsUpdateConstraints];
-    
-    if (!self.isEncapsulatedInAlert) {
-        self.view.backgroundColor = [UIColor whiteColor];
-        _blurView.hidden = YES;
-    }
 }
 
 - (void)viewDidLoad {
@@ -160,11 +162,11 @@ isEncapsulatedInAlert=_isEncapsulatedInAlert;
 
 - (void)setPrimaryColor:(UIColor *)primary {
     [_litePreviewView updateWithColor:primary];
-
+    
     [_saturationSlider updateGraphicsWithColor:primary];
     [_brightnessSlider updateGraphicsWithColor:primary];
     [_alphaSlider updateGraphicsWithColor:primary];
-
+    
     [_haloView setValue:primary.hue];
 }
 

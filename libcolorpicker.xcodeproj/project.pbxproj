@@ -15,7 +15,7 @@
 		660598F022C3BD5B00F97110 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598EF22C3BD5B00F97110 /* Foundation.framework */; };
 		6605990422C3BFE500F97110 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
 		6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; };
-		6605990622C3BFEF00F97110 /* PFColorAlertViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.mm */; };
+		6605990622C3BFEF00F97110 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		6605990722C3BFF600F97110 /* PFColorCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */; };
 		6605990822C3BFFB00F97110 /* PFColorLitePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4622C3BA7700B5C2B3 /* PFColorLitePreviewView.m */; };
 		6605990922C3C00100F97110 /* PFColorLiteSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4122C3BA7700B5C2B3 /* PFColorLiteSlider.m */; };
@@ -33,9 +33,11 @@
 		6657C53722C4531C002ADB41 /* PFColorPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6657C53522C4531C002ADB41 /* PFColorPickerViewController.h */; };
 		6657C53822C4531C002ADB41 /* PFColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */; };
 		6657C53B22C45345002ADB41 /* PFColorPickerBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */; };
-		6657C53C22C45345002ADB41 /* PFColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */; };
+		6657C53C22C45345002ADB41 /* PFColorPickerBaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.mm */; };
+		6657C53D22C45428002ADB41 /* PFColorPickerBaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.mm */; };
+		6657C53E22C45430002ADB41 /* PFColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */; };
 		66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */; };
-		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.mm */; };
+		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */; };
 		66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
 		66ACAC5322C3BA7800B5C2B3 /* PFHaloHueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */; };
@@ -91,11 +93,11 @@
 		6657C53522C4531C002ADB41 /* PFColorPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFColorPickerViewController.h; sourceTree = "<group>"; };
 		6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerViewController.m; sourceTree = "<group>"; };
 		6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFColorPickerBaseViewController.h; sourceTree = "<group>"; };
-		6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerBaseViewController.m; sourceTree = "<group>"; };
+		6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PFColorPickerBaseViewController.mm; sourceTree = "<group>"; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
 		66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PFColor.m"; sourceTree = "<group>"; };
-		66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PFColorAlertViewController.mm; sourceTree = "<group>"; };
+		66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFColorAlertViewController.m; sourceTree = "<group>"; };
 		66ACAC3522C3BA7600B5C2B3 /* PFHaloKnobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFHaloKnobView.h; sourceTree = "<group>"; };
 		66ACAC3622C3BA7600B5C2B3 /* PFColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorPicker.h; sourceTree = "<group>"; };
 		66ACAC3722C3BA7600B5C2B3 /* PSSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSpecifier.h; sourceTree = "<group>"; };
@@ -229,9 +231,9 @@
 				66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */,
 				6657C53322C451A1002ADB41 /* PFColorPickerDelegate.h */,
 				6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */,
-				6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */,
+				6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.mm */,
 				66ACAC4D22C3BA7800B5C2B3 /* PFColorAlertViewController.h */,
-				66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.mm */,
+				66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */,
 				6657C53522C4531C002ADB41 /* PFColorPickerViewController.h */,
 				6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */,
 				66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */,
@@ -511,12 +513,12 @@
 				6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */,
 				6657C53822C4531C002ADB41 /* PFColorPickerViewController.m in Sources */,
 				6605990422C3BFE500F97110 /* libcolorpicker.mm in Sources */,
-				6605990622C3BFEF00F97110 /* PFColorAlertViewController.mm in Sources */,
+				6605990622C3BFEF00F97110 /* PFColorAlertViewController.m in Sources */,
 				6605990A22C3C00400F97110 /* PFColorPicker.m in Sources */,
 				6605990D22C3C00D00F97110 /* PFHaloHueView.m in Sources */,
 				6605990B22C3C00700F97110 /* PFColorTransparentView.m in Sources */,
 				6605990E22C3C01100F97110 /* PFHaloKnobView.m in Sources */,
-				6657C53C22C45345002ADB41 /* PFColorPickerBaseViewController.m in Sources */,
+				6657C53C22C45345002ADB41 /* PFColorPickerBaseViewController.mm in Sources */,
 				6605990C22C3C00900F97110 /* PFColorViewController.mm in Sources */,
 				6605990822C3BFFB00F97110 /* PFColorLitePreviewView.m in Sources */,
 				6605990722C3BFF600F97110 /* PFColorCell.mm in Sources */,
@@ -532,13 +534,15 @@
 				66ACAC5A22C3BA7800B5C2B3 /* PFColorTransparentView.m in Sources */,
 				66ACAC5922C3BA7800B5C2B3 /* PFColorLitePreviewView.m in Sources */,
 				66ACAC5622C3BA7800B5C2B3 /* PFColorAlert.m in Sources */,
-				66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.mm in Sources */,
+				66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */,
 				66ACAC5822C3BA7800B5C2B3 /* PFColorViewController.mm in Sources */,
+				6657C53E22C45430002ADB41 /* PFColorPickerViewController.m in Sources */,
 				66ACAC5522C3BA7800B5C2B3 /* PFColorLiteSlider.m in Sources */,
 				66ACAC5322C3BA7800B5C2B3 /* PFHaloHueView.m in Sources */,
 				66ACAC5B22C3BA7800B5C2B3 /* PFColorPicker.m in Sources */,
 				66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.mm in Sources */,
 				66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */,
+				6657C53D22C45428002ADB41 /* PFColorPickerBaseViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
