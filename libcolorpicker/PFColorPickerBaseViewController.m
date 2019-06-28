@@ -126,9 +126,9 @@ blurView=_blurView;
         [_haloView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:_haloView];
         
         // Slider constraints
-        [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
-        [_sliderContainerStackView  autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
-        [_sliderContainerStackView  autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_haloView withOffset:padding];
+        [_sliderContainerStackView autoPinEdgeToSuperviewSafeArea:ALEdgeLeft withInset:padding];
+        [_sliderContainerStackView autoPinEdgeToSuperviewSafeArea:ALEdgeRight withInset:padding];
+        [_sliderContainerStackView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_haloView withOffset:padding];
         
         // Preview view
         [_litePreviewView autoAlignAxis:ALAxisVertical toSameAxisOfView:_haloView];
@@ -142,7 +142,6 @@ blurView=_blurView;
 }
 
 - (void)chooseHexColor {
-    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Hex Color" message:@"Enter a hex color or copy it to your pasteboard." preferredStyle:UIAlertControllerStyleAlert];
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
