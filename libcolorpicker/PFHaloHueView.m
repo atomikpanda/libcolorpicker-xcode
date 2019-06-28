@@ -56,6 +56,19 @@
 - (void)dragged:(UIPanGestureRecognizer *)gesture {
     CGPoint touchLocation = [gesture locationInView:self];
     
+    // FIXME: stop the angle from jumping around when sliding finger far away from knob
+    // This works better but still requires a magic number for padding the slide distance
+    CGFloat paddingBounds = 24.0f;
+    
+    if (touchLocation.x > self.bounds.size.width + paddingBounds || touchLocation.x < 0.0f - paddingBounds) {
+        [gesture setState:UIGestureRecognizerStateCancelled];
+        return;
+    }
+    if (touchLocation.y > self.bounds.size.height + paddingBounds || touchLocation.y < 0.0f - paddingBounds) {
+        [gesture setState:UIGestureRecognizerStateCancelled];
+        return;
+    }
+    
     // Gets the vector of the difference between the touch location and the knob center
     float touchVector[2] = {touchLocation.x - _knob.center.x, touchLocation.y - _knob.center.y};
     
@@ -71,8 +84,6 @@
 
     // Ensures _knobAngle is always between 0 and 2 pi
     newAngle = fmodf(newAngle, 2 * M_PI);
-    
-    // FIXME: stop the angle from jumping around when sliding finger far away from knob
     
     _knobAngle = newAngle;
 
