@@ -36,6 +36,7 @@ UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *f
 - (void)close;
 @end
 
+// NOTE: might want to remove this if check later
 #ifdef JAILBREAK
 @interface PFLiteColorCell : UITableViewCell
 - (id)initWithStyle:(long long)style reuseIdentifier:(id)identifier specifier:(id)specifier;

@@ -39,6 +39,10 @@
 		6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C54B22C547CA002ADB41 /* PublicTests.m */; };
 		6657C54E22C547CA002ADB41 /* libcolorpicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */; };
 		6657C55422C548BD002ADB41 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6605991222C3C1D500F97110 /* libc++.1.tbd */; };
+		6657C57122C6CAFB002ADB41 /* JailbreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C57022C6CAFB002ADB41 /* JailbreakTests.m */; };
+		6657C57322C6CAFB002ADB41 /* libcolorpicker.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */; };
+		6657C57922C6CB2D002ADB41 /* PublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C54B22C547CA002ADB41 /* PublicTests.m */; };
+		6657C57B22C6CB46002ADB41 /* AppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C57A22C6CB46002ADB41 /* AppStoreTests.m */; };
 		66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */; };
 		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */; };
@@ -74,6 +78,13 @@
 			remoteGlobalIDString = 66ACAC1B22C2C23100B5C2B3;
 			remoteInfo = libcolorpicker_static;
 		};
+		6657C57422C6CAFB002ADB41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66ACAC1422C2C23100B5C2B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 660598FA22C3BF9F00F97110;
+			remoteInfo = libcolorpicker_jailbreak;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,9 +115,13 @@
 		6657C53622C4531C002ADB41 /* PFColorPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerViewController.m; sourceTree = "<group>"; };
 		6657C53922C45345002ADB41 /* PFColorPickerBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFColorPickerBaseViewController.h; sourceTree = "<group>"; };
 		6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerBaseViewController.m; sourceTree = "<group>"; };
-		6657C54922C547CA002ADB41 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6657C54B22C547CA002ADB41 /* PublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicTests.m; sourceTree = "<group>"; };
-		6657C54D22C547CA002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6657C54922C547CA002ADB41 /* libcolorpicker_appstore_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libcolorpicker_appstore_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6657C54B22C547CA002ADB41 /* PublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PublicTests.m; path = ../Tests/PublicTests.m; sourceTree = "<group>"; };
+		6657C54D22C547CA002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/libcolorpicker_appstore_tests/Info.plist; sourceTree = "<group>"; };
+		6657C56E22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libcolorpicker_jailbreak_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6657C57022C6CAFB002ADB41 /* JailbreakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JailbreakTests.m; path = Tests/libcolorpicker_jailbreak_tests/JailbreakTests.m; sourceTree = "<group>"; };
+		6657C57222C6CAFB002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/libcolorpicker_jailbreak_tests/Info.plist; sourceTree = "<group>"; };
+		6657C57A22C6CB46002ADB41 /* AppStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppStoreTests.m; path = Tests/libcolorpicker_appstore_tests/AppStoreTests.m; sourceTree = "<group>"; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
 		66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PFColor.m"; sourceTree = "<group>"; };
@@ -173,6 +188,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6657C56B22C6CAFB002ADB41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6657C57322C6CAFB002ADB41 /* libcolorpicker.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66ACAC1922C2C23100B5C2B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,13 +235,6 @@
 				DB9ADC8E350D2371ADBBDE40 /* Pods_libcolorpicker_static.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		660598FC22C3BF9F00F97110 /* libcolorpicker_dylib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = libcolorpicker_dylib;
 			sourceTree = "<group>";
 		};
 		6657C53F22C53573002ADB41 /* View Controllers */ = {
@@ -291,13 +307,33 @@
 			name = "Public Headers";
 			sourceTree = "<group>";
 		};
-		6657C54A22C547CA002ADB41 /* Tests */ = {
+		6657C54A22C547CA002ADB41 /* libcolorpicker_appstore_tests */ = {
+			isa = PBXGroup;
+			children = (
+				6657C57A22C6CB46002ADB41 /* AppStoreTests.m */,
+				6657C54D22C547CA002ADB41 /* Info.plist */,
+			);
+			path = libcolorpicker_appstore_tests;
+			sourceTree = "<group>";
+		};
+		6657C56F22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */ = {
+			isa = PBXGroup;
+			children = (
+				6657C57022C6CAFB002ADB41 /* JailbreakTests.m */,
+				6657C57222C6CAFB002ADB41 /* Info.plist */,
+			);
+			path = libcolorpicker_jailbreak_tests;
+			sourceTree = "<group>";
+		};
+		6657C57C22C6CB4F002ADB41 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				6657C54B22C547CA002ADB41 /* PublicTests.m */,
-				6657C54D22C547CA002ADB41 /* Info.plist */,
+				6657C54A22C547CA002ADB41 /* libcolorpicker_appstore_tests */,
+				6657C56F22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */,
 			);
-			path = Tests;
+			name = Tests;
+			path = libcolorpicker_dylib;
 			sourceTree = "<group>";
 		};
 		66ACAC1322C2C23100B5C2B3 = {
@@ -306,8 +342,7 @@
 				6605991422C3D9B100F97110 /* Podfile */,
 				66ACAC1E22C2C23100B5C2B3 /* libcolorpicker */,
 				66ACAC6222C3BBB300B5C2B3 /* LCPExampleApp */,
-				660598FC22C3BF9F00F97110 /* libcolorpicker_dylib */,
-				6657C54A22C547CA002ADB41 /* Tests */,
+				6657C57C22C6CB4F002ADB41 /* Tests */,
 				66ACAC1D22C2C23100B5C2B3 /* Products */,
 				660598E922C3BC7200F97110 /* Frameworks */,
 				8B4E3A4FAC3BE0397205F5AA /* Pods */,
@@ -320,7 +355,8 @@
 				66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */,
 				66ACAC6122C3BBB300B5C2B3 /* LCPExampleApp.app */,
 				660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */,
-				6657C54922C547CA002ADB41 /* Tests.xctest */,
+				6657C54922C547CA002ADB41 /* libcolorpicker_appstore_tests.xctest */,
+				6657C56E22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,9 +423,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		660598FA22C3BF9F00F97110 /* libcolorpicker_dynamic */ = {
+		660598FA22C3BF9F00F97110 /* libcolorpicker_jailbreak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dynamic" */;
+			buildConfigurationList = 6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_jailbreak" */;
 			buildPhases = (
 				422B236B9CE65F97EFBF8556 /* [CP] Check Pods Manifest.lock */,
 				660598F722C3BF9F00F97110 /* Headers */,
@@ -400,14 +436,14 @@
 			);
 			dependencies = (
 			);
-			name = libcolorpicker_dynamic;
+			name = libcolorpicker_jailbreak;
 			productName = libcolorpicker_dylib;
 			productReference = 660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		6657C54822C547CA002ADB41 /* Tests */ = {
+		6657C54822C547CA002ADB41 /* libcolorpicker_appstore_tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "libcolorpicker_appstore_tests" */;
 			buildPhases = (
 				6657C54522C547CA002ADB41 /* Sources */,
 				6657C54622C547CA002ADB41 /* Frameworks */,
@@ -418,14 +454,32 @@
 			dependencies = (
 				6657C55022C547CA002ADB41 /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = libcolorpicker_appstore_tests;
 			productName = Tests;
-			productReference = 6657C54922C547CA002ADB41 /* Tests.xctest */;
+			productReference = 6657C54922C547CA002ADB41 /* libcolorpicker_appstore_tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */ = {
+		6657C56D22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_static" */;
+			buildConfigurationList = 6657C57622C6CAFB002ADB41 /* Build configuration list for PBXNativeTarget "libcolorpicker_jailbreak_tests" */;
+			buildPhases = (
+				6657C56A22C6CAFB002ADB41 /* Sources */,
+				6657C56B22C6CAFB002ADB41 /* Frameworks */,
+				6657C56C22C6CAFB002ADB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6657C57522C6CAFB002ADB41 /* PBXTargetDependency */,
+			);
+			name = libcolorpicker_jailbreak_tests;
+			productName = libcolorpicker_jailbreak_tests;
+			productReference = 6657C56E22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_appstore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_appstore" */;
 			buildPhases = (
 				5503C412D0DC54C8166D26EC /* [CP] Check Pods Manifest.lock */,
 				66ACAC1822C2C23100B5C2B3 /* Sources */,
@@ -436,7 +490,7 @@
 			);
 			dependencies = (
 			);
-			name = libcolorpicker_static;
+			name = libcolorpicker_appstore;
 			productName = libcolorpicker;
 			productReference = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */;
 			productType = "com.apple.product-type.library.static";
@@ -476,6 +530,9 @@
 					6657C54822C547CA002ADB41 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					6657C56D22C6CAFB002ADB41 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					66ACAC1B22C2C23100B5C2B3 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -497,16 +554,24 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */,
+				66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_appstore */,
+				660598FA22C3BF9F00F97110 /* libcolorpicker_jailbreak */,
+				6657C54822C547CA002ADB41 /* libcolorpicker_appstore_tests */,
+				6657C56D22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */,
 				66ACAC6022C3BBB300B5C2B3 /* LCPExampleApp */,
-				660598FA22C3BF9F00F97110 /* libcolorpicker_dynamic */,
-				6657C54822C547CA002ADB41 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6657C54722C547CA002ADB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6657C56C22C6CAFB002ADB41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -641,6 +706,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */,
+				6657C57B22C6CB46002ADB41 /* AppStoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6657C56A22C6CAFB002ADB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6657C57922C6CB2D002ADB41 /* PublicTests.m in Sources */,
+				6657C57122C6CAFB002ADB41 /* JailbreakTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,13 +754,18 @@
 /* Begin PBXTargetDependency section */
 		660598E822C3BC6D00F97110 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */;
+			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_appstore */;
 			targetProxy = 660598E722C3BC6D00F97110 /* PBXContainerItemProxy */;
 		};
 		6657C55022C547CA002ADB41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_static */;
+			target = 66ACAC1B22C2C23100B5C2B3 /* libcolorpicker_appstore */;
 			targetProxy = 6657C54F22C547CA002ADB41 /* PBXContainerItemProxy */;
+		};
+		6657C57522C6CAFB002ADB41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 660598FA22C3BF9F00F97110 /* libcolorpicker_jailbreak */;
+			targetProxy = 6657C57422C6CAFB002ADB41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -718,6 +798,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"JAILBREAK=1",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
@@ -734,6 +819,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"JAILBREAK=1",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
@@ -778,6 +868,40 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixelfiredev.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6657C57722C6CAFB002ADB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = libcolorpicker_jailbreak_tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelfiredev.libcolorpicker-jailbreak-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6657C57822C6CAFB002ADB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = libcolorpicker_jailbreak_tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelfiredev.libcolorpicker-jailbreak-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -905,7 +1029,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"JAILBREAK=1",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -927,7 +1050,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"JAILBREAK=1",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -986,7 +1108,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_dynamic" */ = {
+		6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_jailbreak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6605990222C3BF9F00F97110 /* Debug */,
@@ -995,11 +1117,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		6657C55122C547CA002ADB41 /* Build configuration list for PBXNativeTarget "libcolorpicker_appstore_tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6657C55222C547CA002ADB41 /* Debug */,
 				6657C55322C547CA002ADB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6657C57622C6CAFB002ADB41 /* Build configuration list for PBXNativeTarget "libcolorpicker_jailbreak_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6657C57722C6CAFB002ADB41 /* Debug */,
+				6657C57822C6CAFB002ADB41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1013,7 +1144,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_static" */ = {
+		66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_appstore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66ACAC2622C2C23100B5C2B3 /* Debug */,

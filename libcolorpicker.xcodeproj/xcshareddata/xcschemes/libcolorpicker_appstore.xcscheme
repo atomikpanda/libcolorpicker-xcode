@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "660598FA22C3BF9F00F97110"
-               BuildableName = "libcolorpicker.dylib"
-               BlueprintName = "libcolorpicker_dynamic"
+               BlueprintIdentifier = "66ACAC1B22C2C23100B5C2B3"
+               BuildableName = "libcolorpicker.a"
+               BlueprintName = "libcolorpicker_appstore"
                ReferencedContainer = "container:libcolorpicker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "660598FA22C3BF9F00F97110"
-            BuildableName = "libcolorpicker.dylib"
-            BlueprintName = "libcolorpicker_dynamic"
+            BlueprintIdentifier = "66ACAC1B22C2C23100B5C2B3"
+            BuildableName = "libcolorpicker.a"
+            BlueprintName = "libcolorpicker_appstore"
             ReferencedContainer = "container:libcolorpicker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "660598FA22C3BF9F00F97110"
-            BuildableName = "libcolorpicker.dylib"
-            BlueprintName = "libcolorpicker_dynamic"
+            BlueprintIdentifier = "66ACAC1B22C2C23100B5C2B3"
+            BuildableName = "libcolorpicker.a"
+            BlueprintName = "libcolorpicker_appstore"
             ReferencedContainer = "container:libcolorpicker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

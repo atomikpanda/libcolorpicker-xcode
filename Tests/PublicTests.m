@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "../libcolorpicker/libcolorpicker.h"
 
+// These tests should test that all public APIs in libcolorpicker.h
+// are working as intended.
+
 @interface PublicTests : XCTestCase
 
 @end
