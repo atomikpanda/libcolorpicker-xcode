@@ -108,6 +108,13 @@
         self.darkeningWindow.userInteractionEnabled = YES;
         [self.darkeningWindow addGestureRecognizer:tapGesture];
 
+        NSString *pasteboard = [UIPasteboard generalPasteboard].string;
+        if ([pasteboard isEqualToString:[[self.mainViewController getColor] hexFromColor]])
+            return;
+        
+        NSRange range = [pasteboard rangeOfString:@"^#(?:[0-9a-fA-F]{3}){1,2}$" options:NSRegularExpressionSearch];
+        if (range.location != NSNotFound)
+            [self.mainViewController presentPasteHexStringQuestion:pasteboard];
     }];
 }
 

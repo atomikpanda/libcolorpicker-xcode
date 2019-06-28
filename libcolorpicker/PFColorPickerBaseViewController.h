@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL showAlpha;
 - (void)setPrimaryColor:(UIColor *)primary;
 - (UIColor *)getColor;
+- (void)presentPasteHexStringQuestion:(NSString *)pasteboard;
 
 @end
 
