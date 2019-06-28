@@ -36,6 +36,7 @@ UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *f
 - (void)close;
 @end
 
+#ifdef JAILBREAK
 @interface PFLiteColorCell : UITableViewCell
 - (id)initWithStyle:(long long)style reuseIdentifier:(id)identifier specifier:(id)specifier;
 - (UIColor *)previewColor; // this will be used for the circle preview view. override in a subclass
@@ -45,3 +46,4 @@ UIColor *colorFromDefaultsWithKey(NSString *defaults, NSString *key, NSString *f
 
 @interface PFSimpleLiteColorCell : PFLiteColorCell
 @end
+#endif

@@ -1,3 +1,4 @@
+#ifdef JAILBREAK
 #import "PSTableCell.h"
 #import "PSSpecifier.h"
 #import <UIKit/UIKit.h>
@@ -76,3 +77,4 @@
 }
 
 @end
+#endif

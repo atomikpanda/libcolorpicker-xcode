@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 @class PSViewController;
 
-__attribute__((deprecated))
 @interface PFColorViewController : UIViewController
 
 - (id)initForContentSize:(CGSize)size;

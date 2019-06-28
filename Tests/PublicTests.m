@@ -67,6 +67,24 @@
     XCTAssertEqual([color alpha], 0.5);
 }
 
+- (void)testPFColorAlertInterface {
+    XCTAssertTrue([PFColorAlert respondsToSelector:@selector(colorAlertWithStartColor:showAlpha:)]);
+    
+    XCTAssertTrue([PFColorAlert instancesRespondToSelector:@selector(initWithStartColor:showAlpha:)]);
+    
+    XCTAssertTrue([PFColorAlert instancesRespondToSelector:@selector(displayWithCompletion:)]);
+    
+    XCTAssertTrue([PFColorAlert instancesRespondToSelector:@selector(close)]);
+}
+
+- (void)testPFLiteColorCell {
+    // Jailbreak version only
+    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(previewColor)]);
+    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(updateCellDisplay)]);
+    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(specifier)]);
+    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(initWithStyle:reuseIdentifier:specifier:)]);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

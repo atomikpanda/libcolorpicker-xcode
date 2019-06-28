@@ -1,3 +1,5 @@
+#ifdef JAILBREAK
+
 #import "PSTableCell.h"
 #import "PSSpecifier.h"
 #import <UIKit/UIKit.h>
@@ -78,3 +80,4 @@ static void PFLiteColorCellNotifCB(CFNotificationCenterRef center, void *observe
 }
 
 @end
+#endif
