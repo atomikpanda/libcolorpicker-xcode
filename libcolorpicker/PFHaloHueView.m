@@ -60,11 +60,8 @@
     // This works better but still requires a magic number for padding the slide distance
     CGFloat paddingBounds = 24.0f;
     
-    if (touchLocation.x > self.bounds.size.width + paddingBounds || touchLocation.x < 0.0f - paddingBounds) {
-        [gesture setState:UIGestureRecognizerStateCancelled];
-        return;
-    }
-    if (touchLocation.y > self.bounds.size.height + paddingBounds || touchLocation.y < 0.0f - paddingBounds) {
+    if ((touchLocation.x > self.bounds.size.width + paddingBounds || touchLocation.x < paddingBounds) ||
+        (touchLocation.y > self.bounds.size.height + paddingBounds || touchLocation.y < paddingBounds)) {
         [gesture setState:UIGestureRecognizerStateCancelled];
         return;
     }
