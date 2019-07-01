@@ -26,7 +26,7 @@
     NSString *fallbackHex = @"#ff0000";  // (You want to load from prefs probably)
     
     UIColor *startColor = LCPParseColorString(readFromKey, fallbackHex); // this color will be used at startup
-    self.alert = [PFColorAlert colorAlertWithStartColor:[UIColor yellowColor] showAlpha:YES];
+    self.alert = [PFColorAlert colorAlertWithStartColor:startColor showAlpha:YES];
     
     // show alert and set completion callback
     [self.alert displayWithCompletion:
