@@ -61,10 +61,8 @@
     CGFloat paddingBounds = 24.0f;
     
     if ((touchLocation.x > self.bounds.size.width + paddingBounds || touchLocation.x < paddingBounds) ||
-        (touchLocation.y > self.bounds.size.height + paddingBounds || touchLocation.y < paddingBounds)) {
-        [gesture setState:UIGestureRecognizerStateCancelled];
+        (touchLocation.y > self.bounds.size.height + paddingBounds || touchLocation.y < paddingBounds))
         return;
-    }
     
     // Gets the vector of the difference between the touch location and the knob center
     float touchVector[2] = {touchLocation.x - _knob.center.x, touchLocation.y - _knob.center.y};
