@@ -22,8 +22,10 @@
         float borderWidth = frame.size.width / 10.0;
 
         float doubleBorderWidth = borderWidth * 2;
-        CGRect circleFrame = CGRectMake(borderWidth, borderWidth,
-                                        self.frame.size.width - doubleBorderWidth, self.frame.size.width - doubleBorderWidth);
+        CGRect circleFrame = CGRectMake(borderWidth,
+                                        borderWidth,
+                                        self.frame.size.width - doubleBorderWidth,
+                                        self.frame.size.width - doubleBorderWidth);
         _colorView = [[UIView alloc] initWithFrame:circleFrame];
         _colorView.layer.cornerRadius = circleFrame.size.width / 2.0;
         _colorView.layer.masksToBounds = true;
