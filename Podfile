@@ -9,7 +9,7 @@ target 'LCPExampleApp' do
 
 end
 
-target 'libcolorpicker_dynamic' do
+target 'libcolorpicker_jailbreak' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -18,7 +18,7 @@ target 'libcolorpicker_dynamic' do
 
 end
 
-target 'libcolorpicker_static' do
+target 'libcolorpicker_appstore' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

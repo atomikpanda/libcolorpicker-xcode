@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033473E29CC84E0F1D30B83A /* Pods_libcolorpicker_static.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9ADC8E350D2371ADBBDE40 /* Pods_libcolorpicker_static.framework */; };
-		3CD126E9BBECA6E6B6DF87A7 /* Pods_libcolorpicker_dynamic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A048C1BCCA543FE55ECC9D1 /* Pods_libcolorpicker_dynamic.framework */; };
+		07C0036B4EEB83273F5D5856 /* Pods_LCPExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500FCB80171945CE6670C911 /* Pods_LCPExampleApp.framework */; };
 		660598EA22C3BC7200F97110 /* libcolorpicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */; };
 		660598EC22C3BD5100F97110 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598EB22C3BD5100F97110 /* UIKit.framework */; };
 		660598EE22C3BD5500F97110 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598ED22C3BD5500F97110 /* CoreGraphics.framework */; };
@@ -39,10 +38,7 @@
 		6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C54B22C547CA002ADB41 /* PublicTests.m */; };
 		6657C54E22C547CA002ADB41 /* libcolorpicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */; };
 		6657C55422C548BD002ADB41 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6605991222C3C1D500F97110 /* libc++.1.tbd */; };
-		6657C57122C6CAFB002ADB41 /* JailbreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C57022C6CAFB002ADB41 /* JailbreakTests.m */; };
 		6657C57322C6CAFB002ADB41 /* libcolorpicker.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598FB22C3BF9F00F97110 /* libcolorpicker.dylib */; };
-		6657C57922C6CB2D002ADB41 /* PublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C54B22C547CA002ADB41 /* PublicTests.m */; };
-		6657C57B22C6CB46002ADB41 /* AppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657C57A22C6CB46002ADB41 /* AppStoreTests.m */; };
 		66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */; };
 		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */; };
@@ -60,7 +56,10 @@
 		66ACAC6D22C3BBB500B5C2B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66ACAC6C22C3BBB500B5C2B3 /* Assets.xcassets */; };
 		66ACAC7022C3BBB500B5C2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ACAC6E22C3BBB500B5C2B3 /* LaunchScreen.storyboard */; };
 		66ACAC7322C3BBB500B5C2B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC7222C3BBB500B5C2B3 /* main.m */; };
-		BB13695BDC712402CA9B4432 /* Pods_LCPExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335402559C790BC2F83993A /* Pods_LCPExampleApp.framework */; };
+		66AFF66022D4EF1200E9323F /* AppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 669FD94D22D4EEA50012855C /* AppStoreTests.m */; };
+		66F0BE3E22D4ED8B00A0DED2 /* JailbreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */; };
+		84FE41754B0BC96CB5D286CA /* Pods_libcolorpicker_jailbreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3AE8BC6E9DC708E34BAAE /* Pods_libcolorpicker_jailbreak.framework */; };
+		D7D56F36EEC937966B946F64 /* Pods_libcolorpicker_appstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643E38950D18D0AD2106683D /* Pods_libcolorpicker_appstore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +99,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6335402559C790BC2F83993A /* Pods_LCPExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCPExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D75296B8CF8C484BC0CD341 /* Pods-LCPExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCPExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		500FCB80171945CE6670C911 /* Pods_LCPExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCPExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		643E38950D18D0AD2106683D /* Pods_libcolorpicker_appstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libcolorpicker_appstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		660598EB22C3BD5100F97110 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		660598ED22C3BD5500F97110 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		660598EF22C3BD5B00F97110 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,11 +118,10 @@
 		6657C53A22C45345002ADB41 /* PFColorPickerBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorPickerBaseViewController.m; sourceTree = "<group>"; };
 		6657C54922C547CA002ADB41 /* libcolorpicker_appstore_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libcolorpicker_appstore_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6657C54B22C547CA002ADB41 /* PublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PublicTests.m; path = ../Tests/PublicTests.m; sourceTree = "<group>"; };
-		6657C54D22C547CA002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/libcolorpicker_appstore_tests/Info.plist; sourceTree = "<group>"; };
 		6657C56E22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libcolorpicker_jailbreak_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6657C57022C6CAFB002ADB41 /* JailbreakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JailbreakTests.m; path = Tests/libcolorpicker_jailbreak_tests/JailbreakTests.m; sourceTree = "<group>"; };
 		6657C57222C6CAFB002ADB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/libcolorpicker_jailbreak_tests/Info.plist; sourceTree = "<group>"; };
-		6657C57A22C6CB46002ADB41 /* AppStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppStoreTests.m; path = Tests/libcolorpicker_appstore_tests/AppStoreTests.m; sourceTree = "<group>"; };
+		669FD94D22D4EEA50012855C /* AppStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppStoreTests.m; path = Tests/libcolorpicker_appstore_tests/AppStoreTests.m; sourceTree = SOURCE_ROOT; };
+		669FD94F22D4EEAD0012855C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/libcolorpicker_appstore_tests/Info.plist; sourceTree = SOURCE_ROOT; };
 		66ACAC1C22C2C23100B5C2B3 /* libcolorpicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcolorpicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ACAC3222C3BA7600B5C2B3 /* PFColorLiteSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorLiteSlider.h; sourceTree = "<group>"; };
 		66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PFColor.m"; sourceTree = "<group>"; };
@@ -160,14 +160,13 @@
 		66ACAC6F22C3BBB500B5C2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66ACAC7122C3BBB500B5C2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66ACAC7222C3BBB500B5C2B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		678B1C2BBF6B02336AF3BB5E /* Pods-libcolorpicker_static.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_static.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_static/Pods-libcolorpicker_static.release.xcconfig"; sourceTree = "<group>"; };
-		89BCD7BC574A297EDA03521E /* Pods-libcolorpicker_static.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_static.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_static/Pods-libcolorpicker_static.debug.xcconfig"; sourceTree = "<group>"; };
-		8A048C1BCCA543FE55ECC9D1 /* Pods_libcolorpicker_dynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libcolorpicker_dynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C03BC3943669F414383EE9F /* Pods-libcolorpicker_dynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_dynamic.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_dynamic/Pods-libcolorpicker_dynamic.release.xcconfig"; sourceTree = "<group>"; };
-		A1DAB45EAC6C8146D7EAB034 /* Pods-LCPExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCPExampleApp.release.xcconfig"; path = "Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		C95AA5BA0D43803E3EF61C2D /* Pods-libcolorpicker_dynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_dynamic.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_dynamic/Pods-libcolorpicker_dynamic.debug.xcconfig"; sourceTree = "<group>"; };
-		DB9ADC8E350D2371ADBBDE40 /* Pods_libcolorpicker_static.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libcolorpicker_static.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D41DA84607AA3F22CF7BD3 /* Pods-LCPExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCPExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JailbreakTests.m; path = Tests/libcolorpicker_jailbreak_tests/JailbreakTests.m; sourceTree = SOURCE_ROOT; };
+		6FC9620E4FBBE3BE4395C58D /* Pods-libcolorpicker_jailbreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_jailbreak.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_jailbreak/Pods-libcolorpicker_jailbreak.release.xcconfig"; sourceTree = "<group>"; };
+		7C3E126DC432839D79B619DF /* Pods-libcolorpicker_appstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_appstore.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_appstore/Pods-libcolorpicker_appstore.debug.xcconfig"; sourceTree = "<group>"; };
+		91AC1CEF93962A2E8FC10D6E /* Pods-libcolorpicker_jailbreak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_jailbreak.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_jailbreak/Pods-libcolorpicker_jailbreak.debug.xcconfig"; sourceTree = "<group>"; };
+		AD2CAA6476A0E846186196DA /* Pods-LCPExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCPExampleApp.release.xcconfig"; path = "Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		AFE3AE8BC6E9DC708E34BAAE /* Pods_libcolorpicker_jailbreak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libcolorpicker_jailbreak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53BF030349D2F53818A277E /* Pods-libcolorpicker_appstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_appstore.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_appstore/Pods-libcolorpicker_appstore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD126E9BBECA6E6B6DF87A7 /* Pods_libcolorpicker_dynamic.framework in Frameworks */,
+				84FE41754B0BC96CB5D286CA /* Pods_libcolorpicker_jailbreak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +202,7 @@
 				660598F022C3BD5B00F97110 /* Foundation.framework in Frameworks */,
 				660598EE22C3BD5500F97110 /* CoreGraphics.framework in Frameworks */,
 				660598EC22C3BD5100F97110 /* UIKit.framework in Frameworks */,
-				033473E29CC84E0F1D30B83A /* Pods_libcolorpicker_static.framework in Frameworks */,
+				D7D56F36EEC937966B946F64 /* Pods_libcolorpicker_appstore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +212,7 @@
 			files = (
 				6605991322C3C1D500F97110 /* libc++.1.tbd in Frameworks */,
 				660598EA22C3BC7200F97110 /* libcolorpicker.a in Frameworks */,
-				BB13695BDC712402CA9B4432 /* Pods_LCPExampleApp.framework in Frameworks */,
+				07C0036B4EEB83273F5D5856 /* Pods_LCPExampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,9 +229,9 @@
 				660598EF22C3BD5B00F97110 /* Foundation.framework */,
 				660598ED22C3BD5500F97110 /* CoreGraphics.framework */,
 				660598EB22C3BD5100F97110 /* UIKit.framework */,
-				6335402559C790BC2F83993A /* Pods_LCPExampleApp.framework */,
-				8A048C1BCCA543FE55ECC9D1 /* Pods_libcolorpicker_dynamic.framework */,
-				DB9ADC8E350D2371ADBBDE40 /* Pods_libcolorpicker_static.framework */,
+				500FCB80171945CE6670C911 /* Pods_LCPExampleApp.framework */,
+				643E38950D18D0AD2106683D /* Pods_libcolorpicker_appstore.framework */,
+				AFE3AE8BC6E9DC708E34BAAE /* Pods_libcolorpicker_jailbreak.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,8 +309,8 @@
 		6657C54A22C547CA002ADB41 /* libcolorpicker_appstore_tests */ = {
 			isa = PBXGroup;
 			children = (
-				6657C57A22C6CB46002ADB41 /* AppStoreTests.m */,
-				6657C54D22C547CA002ADB41 /* Info.plist */,
+				669FD94D22D4EEA50012855C /* AppStoreTests.m */,
+				669FD94F22D4EEAD0012855C /* Info.plist */,
 			);
 			path = libcolorpicker_appstore_tests;
 			sourceTree = "<group>";
@@ -319,7 +318,7 @@
 		6657C56F22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */ = {
 			isa = PBXGroup;
 			children = (
-				6657C57022C6CAFB002ADB41 /* JailbreakTests.m */,
+				66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */,
 				6657C57222C6CAFB002ADB41 /* Info.plist */,
 			);
 			path = libcolorpicker_jailbreak_tests;
@@ -332,8 +331,7 @@
 				6657C54A22C547CA002ADB41 /* libcolorpicker_appstore_tests */,
 				6657C56F22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */,
 			);
-			name = Tests;
-			path = libcolorpicker_dylib;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		66ACAC1322C2C23100B5C2B3 = {
@@ -397,12 +395,12 @@
 		8B4E3A4FAC3BE0397205F5AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F3D41DA84607AA3F22CF7BD3 /* Pods-LCPExampleApp.debug.xcconfig */,
-				A1DAB45EAC6C8146D7EAB034 /* Pods-LCPExampleApp.release.xcconfig */,
-				C95AA5BA0D43803E3EF61C2D /* Pods-libcolorpicker_dynamic.debug.xcconfig */,
-				9C03BC3943669F414383EE9F /* Pods-libcolorpicker_dynamic.release.xcconfig */,
-				89BCD7BC574A297EDA03521E /* Pods-libcolorpicker_static.debug.xcconfig */,
-				678B1C2BBF6B02336AF3BB5E /* Pods-libcolorpicker_static.release.xcconfig */,
+				4D75296B8CF8C484BC0CD341 /* Pods-LCPExampleApp.debug.xcconfig */,
+				AD2CAA6476A0E846186196DA /* Pods-LCPExampleApp.release.xcconfig */,
+				7C3E126DC432839D79B619DF /* Pods-libcolorpicker_appstore.debug.xcconfig */,
+				E53BF030349D2F53818A277E /* Pods-libcolorpicker_appstore.release.xcconfig */,
+				91AC1CEF93962A2E8FC10D6E /* Pods-libcolorpicker_jailbreak.debug.xcconfig */,
+				6FC9620E4FBBE3BE4395C58D /* Pods-libcolorpicker_jailbreak.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -427,7 +425,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6605990122C3BF9F00F97110 /* Build configuration list for PBXNativeTarget "libcolorpicker_jailbreak" */;
 			buildPhases = (
-				422B236B9CE65F97EFBF8556 /* [CP] Check Pods Manifest.lock */,
+				E75EE8CBBF9191F0F74C702D /* [CP] Check Pods Manifest.lock */,
 				660598F722C3BF9F00F97110 /* Headers */,
 				660598F822C3BF9F00F97110 /* Sources */,
 				660598F922C3BF9F00F97110 /* Frameworks */,
@@ -481,7 +479,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66ACAC2522C2C23100B5C2B3 /* Build configuration list for PBXNativeTarget "libcolorpicker_appstore" */;
 			buildPhases = (
-				5503C412D0DC54C8166D26EC /* [CP] Check Pods Manifest.lock */,
+				CEF3D99062FD0D2729453D1C /* [CP] Check Pods Manifest.lock */,
 				66ACAC1822C2C23100B5C2B3 /* Sources */,
 				66ACAC1922C2C23100B5C2B3 /* Frameworks */,
 				66ACAC1A22C2C23100B5C2B3 /* CopyFiles */,
@@ -499,11 +497,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66ACAC7422C3BBB500B5C2B3 /* Build configuration list for PBXNativeTarget "LCPExampleApp" */;
 			buildPhases = (
-				39C8007C9CBBAD556CB22862 /* [CP] Check Pods Manifest.lock */,
+				7F46FEBB477FD4EB08C6765A /* [CP] Check Pods Manifest.lock */,
 				66ACAC5D22C3BBB300B5C2B3 /* Sources */,
 				66ACAC5E22C3BBB300B5C2B3 /* Frameworks */,
 				66ACAC5F22C3BBB300B5C2B3 /* Resources */,
-				B31EC8562E67877B3506098A /* [CP] Embed Pods Frameworks */,
+				3D5AE7D8890E45BC5406B4C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -592,7 +590,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		39C8007C9CBBAD556CB22862 /* [CP] Check Pods Manifest.lock */ = {
+		3D5AE7D8890E45BC5406B4C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F46FEBB477FD4EB08C6765A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -614,7 +629,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		422B236B9CE65F97EFBF8556 /* [CP] Check Pods Manifest.lock */ = {
+		CEF3D99062FD0D2729453D1C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -629,14 +644,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-libcolorpicker_dynamic-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-libcolorpicker_appstore-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5503C412D0DC54C8166D26EC /* [CP] Check Pods Manifest.lock */ = {
+		E75EE8CBBF9191F0F74C702D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -651,28 +666,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-libcolorpicker_static-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-libcolorpicker_jailbreak-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B31EC8562E67877B3506098A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LCPExampleApp/Pods-LCPExampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -705,8 +703,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AFF66022D4EF1200E9323F /* AppStoreTests.m in Sources */,
 				6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */,
-				6657C57B22C6CB46002ADB41 /* AppStoreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,8 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6657C57922C6CB2D002ADB41 /* PublicTests.m in Sources */,
-				6657C57122C6CAFB002ADB41 /* JailbreakTests.m in Sources */,
+				66F0BE3E22D4ED8B00A0DED2 /* JailbreakTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +788,7 @@
 /* Begin XCBuildConfiguration section */
 		6605990222C3BF9F00F97110 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C95AA5BA0D43803E3EF61C2D /* Pods-libcolorpicker_dynamic.debug.xcconfig */;
+			baseConfigurationReference = 91AC1CEF93962A2E8FC10D6E /* Pods-libcolorpicker_jailbreak.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -813,7 +810,7 @@
 		};
 		6605990322C3BF9F00F97110 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C03BC3943669F414383EE9F /* Pods-libcolorpicker_dynamic.release.xcconfig */;
+			baseConfigurationReference = 6FC9620E4FBBE3BE4395C58D /* Pods-libcolorpicker_jailbreak.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -837,7 +834,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tests/Info.plist;
+				DEVELOPMENT_TEAM = CMADB5PKU7;
+				INFOPLIST_FILE = Tests/libcolorpicker_appstore_tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,7 +856,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tests/Info.plist;
+				DEVELOPMENT_TEAM = CMADB5PKU7;
+				INFOPLIST_FILE = Tests/libcolorpicker_appstore_tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,6 +878,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CMADB5PKU7;
 				INFOPLIST_FILE = libcolorpicker_jailbreak_tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -896,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CMADB5PKU7;
 				INFOPLIST_FILE = libcolorpicker_jailbreak_tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1023,7 +1024,7 @@
 		};
 		66ACAC2622C2C23100B5C2B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89BCD7BC574A297EDA03521E /* Pods-libcolorpicker_static.debug.xcconfig */;
+			baseConfigurationReference = 7C3E126DC432839D79B619DF /* Pods-libcolorpicker_appstore.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1044,7 +1045,7 @@
 		};
 		66ACAC2722C2C23100B5C2B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678B1C2BBF6B02336AF3BB5E /* Pods-libcolorpicker_static.release.xcconfig */;
+			baseConfigurationReference = E53BF030349D2F53818A277E /* Pods-libcolorpicker_appstore.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1065,7 +1066,7 @@
 		};
 		66ACAC7522C3BBB500B5C2B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3D41DA84607AA3F22CF7BD3 /* Pods-LCPExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 4D75296B8CF8C484BC0CD341 /* Pods-LCPExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1087,7 +1088,7 @@
 		};
 		66ACAC7622C3BBB500B5C2B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1DAB45EAC6C8146D7EAB034 /* Pods-LCPExampleApp.release.xcconfig */;
+			baseConfigurationReference = AD2CAA6476A0E846186196DA /* Pods-LCPExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -68,6 +68,9 @@
     color = LCPParseColorString(@"#fff:0.5", @"#A7A7A7");
     XCTAssertEqualObjects([UIColor hexFromColor:color], @"#FFFFFF");
     XCTAssertEqual([color alpha], 0.5);
+    
+    color = LCPParseColorString(@"xyz", @"#");
+    XCTAssertEqualObjects([UIColor hexFromColor:color], @"#808080");
 }
 
 - (void)testPFColorAlertInterface {
@@ -82,10 +85,10 @@
 
 - (void)testPFLiteColorCell {
     // Jailbreak version only
-    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(previewColor)]);
-    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(updateCellDisplay)]);
-    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(specifier)]);
-    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(initWithStyle:reuseIdentifier:specifier:)]);
+//    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(previewColor)]);
+//    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(updateCellDisplay)]);
+//    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(specifier)]);
+//    XCTAssertTrue([PFLiteColorCell instancesRespondToSelector:@selector(initWithStyle:reuseIdentifier:specifier:)]);
 }
 
 - (void)testPerformanceExample {
