@@ -70,7 +70,7 @@
     XCTAssertEqual([color alpha], 0.5);
     
     color = LCPParseColorString(@"xyz", @"#");
-    XCTAssertEqualObjects([UIColor hexFromColor:color], @"#808080");
+    XCTAssertEqualObjects(color, nil);
 }
 
 - (void)testPFColorAlertInterface {
