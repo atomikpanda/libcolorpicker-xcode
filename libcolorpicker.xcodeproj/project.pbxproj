@@ -57,6 +57,7 @@
 		66ACAC7022C3BBB500B5C2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ACAC6E22C3BBB500B5C2B3 /* LaunchScreen.storyboard */; };
 		66ACAC7322C3BBB500B5C2B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC7222C3BBB500B5C2B3 /* main.m */; };
 		66AFF66022D4EF1200E9323F /* AppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 669FD94D22D4EEA50012855C /* AppStoreTests.m */; };
+		66E6E9C722D50F6400FA5D2B /* CaptainHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E6E9C622D50F6400FA5D2B /* CaptainHook.h */; };
 		66F0BE3E22D4ED8B00A0DED2 /* JailbreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */; };
 		84FE41754B0BC96CB5D286CA /* Pods_libcolorpicker_jailbreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3AE8BC6E9DC708E34BAAE /* Pods_libcolorpicker_jailbreak.framework */; };
 		D7D56F36EEC937966B946F64 /* Pods_libcolorpicker_appstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643E38950D18D0AD2106683D /* Pods_libcolorpicker_appstore.framework */; };
@@ -160,6 +161,7 @@
 		66ACAC6F22C3BBB500B5C2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66ACAC7122C3BBB500B5C2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66ACAC7222C3BBB500B5C2B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66E6E9C622D50F6400FA5D2B /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
 		66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JailbreakTests.m; path = Tests/libcolorpicker_jailbreak_tests/JailbreakTests.m; sourceTree = SOURCE_ROOT; };
 		6FC9620E4FBBE3BE4395C58D /* Pods-libcolorpicker_jailbreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_jailbreak.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_jailbreak/Pods-libcolorpicker_jailbreak.release.xcconfig"; sourceTree = "<group>"; };
 		7C3E126DC432839D79B619DF /* Pods-libcolorpicker_appstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_appstore.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_appstore/Pods-libcolorpicker_appstore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			children = (
 				66ACAC4922C3BA7700B5C2B3 /* UIColor+PFColor.h */,
 				66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */,
+				66E6E9C622D50F6400FA5D2B /* CaptainHook.h */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E6E9C722D50F6400FA5D2B /* CaptainHook.h in Headers */,
 				6657C53B22C45345002ADB41 /* PFColorPickerBaseViewController.h in Headers */,
 				6657C53422C451A1002ADB41 /* PFColorPickerDelegate.h in Headers */,
 				6657C53722C4531C002ADB41 /* PFColorPickerViewController.h in Headers */,
