@@ -16,7 +16,7 @@
 @implementation PFColorAlert
 
 + (PFColorAlert *)colorAlertWithStartColor:(UIColor *)startColor showAlpha:(BOOL)showAlpha {
-    return [[PFColorAlert alloc] initWithStartColor:startColor showAlpha:showAlpha];
+    return [[[PFColorAlert alloc] initWithStartColor:startColor showAlpha:showAlpha] autorelease];
 }
 
 - (PFColorAlert *)initWithStartColor:(UIColor *)startColor showAlpha:(BOOL)showAlpha {
@@ -24,7 +24,7 @@
 
     self.isOpen = NO;
 
-    self.darkeningWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.darkeningWindow = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
     self.darkeningWindow.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
 
     CGRect winFrame = [UIScreen mainScreen].bounds;
@@ -50,11 +50,11 @@
         winFrame.size.width -= rightPadding;
     }
     
-    self.popWindow = [[UIWindow alloc] initWithFrame:winFrame];
+    self.popWindow = [[[UIWindow alloc] initWithFrame:winFrame] autorelease];
     self.popWindow.layer.masksToBounds = true;
     self.popWindow.layer.cornerRadius = 15;
 
-    self.mainViewController = [[PFColorAlertViewController alloc] init];
+    self.mainViewController = [[[PFColorAlertViewController alloc] init] autorelease];
     self.mainViewController.startColor = startColor;
     self.mainViewController.showAlpha = showAlpha;
 
@@ -126,6 +126,7 @@
                                                cancelButtonTitle:nil
                                                otherButtonTitles:@"OK", nil];
     [deprecated show];
+    [deprecated release];
 }
 
 - (void)close {
@@ -142,6 +143,14 @@
         self.popWindow.hidden = YES;
         self.isOpen = NO;
     }];
+}
+
+- (void)dealloc {
+    [_popWindow release];
+    [_darkeningWindow release];
+    [_mainViewController release];
+    [_completionBlock release];
+    [super dealloc];
 }
 
 @end

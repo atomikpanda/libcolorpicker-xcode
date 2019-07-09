@@ -14,7 +14,7 @@
 		660598EE22C3BD5500F97110 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598ED22C3BD5500F97110 /* CoreGraphics.framework */; };
 		660598F022C3BD5B00F97110 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598EF22C3BD5B00F97110 /* Foundation.framework */; };
 		6605990422C3BFE500F97110 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
-		6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; };
+		6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6605990622C3BFEF00F97110 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		6605990722C3BFF600F97110 /* PFColorCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */; };
 		6605990822C3BFFB00F97110 /* PFColorLitePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4622C3BA7700B5C2B3 /* PFColorLitePreviewView.m */; };
@@ -49,7 +49,7 @@
 		66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
 		66ACAC5322C3BA7800B5C2B3 /* PFHaloHueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */; };
 		66ACAC5522C3BA7800B5C2B3 /* PFColorLiteSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4122C3BA7700B5C2B3 /* PFColorLiteSlider.m */; };
-		66ACAC5622C3BA7800B5C2B3 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; };
+		66ACAC5622C3BA7800B5C2B3 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		66ACAC5822C3BA7800B5C2B3 /* PFColorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4422C3BA7700B5C2B3 /* PFColorViewController.mm */; };
 		66ACAC5922C3BA7800B5C2B3 /* PFColorLitePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4622C3BA7700B5C2B3 /* PFColorLitePreviewView.m */; };
 		66ACAC5A22C3BA7800B5C2B3 /* PFColorTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4822C3BA7700B5C2B3 /* PFColorTransparentView.m */; };
@@ -804,6 +804,7 @@
 					"JAILBREAK=1",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -825,6 +826,7 @@
 					"JAILBREAK=1",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = libcolorpicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
