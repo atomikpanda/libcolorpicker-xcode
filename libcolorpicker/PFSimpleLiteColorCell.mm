@@ -1,5 +1,3 @@
-#ifdef JAILBREAK
-
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "libcolorpicker.h"
@@ -115,4 +113,4 @@
 }
 
 @end
-#endif
+

@@ -12,7 +12,7 @@
 		660598EC22C3BD5100F97110 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598EB22C3BD5100F97110 /* UIKit.framework */; };
 		660598EE22C3BD5500F97110 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598ED22C3BD5500F97110 /* CoreGraphics.framework */; };
 		660598F022C3BD5B00F97110 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660598EF22C3BD5B00F97110 /* Foundation.framework */; };
-		6605990422C3BFE500F97110 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
+		6605990422C3BFE500F97110 /* libcolorpicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.m */; };
 		6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6605990622C3BFEF00F97110 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		6605990722C3BFF600F97110 /* PFColorCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4C22C3BA7700B5C2B3 /* PFColorCell.mm */; };
@@ -42,7 +42,7 @@
 		66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3322C3BA7600B5C2B3 /* UIColor+PFColor.m */; };
 		66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3422C3BA7600B5C2B3 /* PFColorAlertViewController.m */; };
 		66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */; };
-		66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */; };
+		66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.m */; };
 		66ACAC5322C3BA7800B5C2B3 /* PFHaloHueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */; };
 		66ACAC5522C3BA7800B5C2B3 /* PFColorLiteSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4122C3BA7700B5C2B3 /* PFColorLiteSlider.m */; };
 		66ACAC5622C3BA7800B5C2B3 /* PFColorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -58,6 +58,11 @@
 		66ACAC7322C3BBB500B5C2B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACAC7222C3BBB500B5C2B3 /* main.m */; };
 		66AFF66022D4EF1200E9323F /* AppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 669FD94D22D4EEA50012855C /* AppStoreTests.m */; };
 		66E6E9C722D50F6400FA5D2B /* CaptainHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E6E9C622D50F6400FA5D2B /* CaptainHook.h */; };
+		66E6E9CA22D53C4E00FA5D2B /* PFColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E6E9C822D53C4E00FA5D2B /* PFColor.h */; };
+		66E6E9CB22D53C4E00FA5D2B /* PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6E9C922D53C4E00FA5D2B /* PFColor.m */; };
+		66E6E9CC22D53C4E00FA5D2B /* PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6E9C922D53C4E00FA5D2B /* PFColor.m */; };
+		66E6E9CF22D5494200FA5D2B /* PFColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6E9CE22D5494200FA5D2B /* PFColorTests.m */; };
+		66E6E9D022D54A7600FA5D2B /* PFColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6E9CE22D5494200FA5D2B /* PFColorTests.m */; };
 		66F0BE3E22D4ED8B00A0DED2 /* JailbreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */; };
 		84FE41754B0BC96CB5D286CA /* Pods_libcolorpicker_jailbreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3AE8BC6E9DC708E34BAAE /* Pods_libcolorpicker_jailbreak.framework */; };
 		D7D56F36EEC937966B946F64 /* Pods_libcolorpicker_appstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643E38950D18D0AD2106683D /* Pods_libcolorpicker_appstore.framework */; };
@@ -134,7 +139,7 @@
 		66ACAC3922C3BA7700B5C2B3 /* PFHaloHueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFHaloHueView.h; sourceTree = "<group>"; };
 		66ACAC3A22C3BA7700B5C2B3 /* PFHaloKnobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFHaloKnobView.m; sourceTree = "<group>"; };
 		66ACAC3B22C3BA7700B5C2B3 /* PFLiteColorCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PFLiteColorCell.mm; sourceTree = "<group>"; };
-		66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = libcolorpicker.mm; sourceTree = "<group>"; };
+		66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = libcolorpicker.m; sourceTree = "<group>"; };
 		66ACAC3D22C3BA7700B5C2B3 /* PFHaloHueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFHaloHueView.m; sourceTree = "<group>"; };
 		66ACAC3E22C3BA7700B5C2B3 /* PFSimpleLiteColorCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PFSimpleLiteColorCell.mm; sourceTree = "<group>"; };
 		66ACAC3F22C3BA7700B5C2B3 /* PFColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFColorViewController.h; sourceTree = "<group>"; };
@@ -162,6 +167,9 @@
 		66ACAC7122C3BBB500B5C2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66ACAC7222C3BBB500B5C2B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66E6E9C622D50F6400FA5D2B /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
+		66E6E9C822D53C4E00FA5D2B /* PFColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFColor.h; sourceTree = "<group>"; };
+		66E6E9C922D53C4E00FA5D2B /* PFColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColor.m; sourceTree = "<group>"; };
+		66E6E9CE22D5494200FA5D2B /* PFColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFColorTests.m; sourceTree = "<group>"; };
 		66F0BE3C22D4ED7C00A0DED2 /* JailbreakTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JailbreakTests.m; path = Tests/libcolorpicker_jailbreak_tests/JailbreakTests.m; sourceTree = SOURCE_ROOT; };
 		6FC9620E4FBBE3BE4395C58D /* Pods-libcolorpicker_jailbreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_jailbreak.release.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_jailbreak/Pods-libcolorpicker_jailbreak.release.xcconfig"; sourceTree = "<group>"; };
 		7C3E126DC432839D79B619DF /* Pods-libcolorpicker_appstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcolorpicker_appstore.debug.xcconfig"; path = "Target Support Files/Pods-libcolorpicker_appstore/Pods-libcolorpicker_appstore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				6657C54B22C547CA002ADB41 /* PublicTests.m */,
+				66E6E9CE22D5494200FA5D2B /* PFColorTests.m */,
 				6657C54A22C547CA002ADB41 /* libcolorpicker_appstore_tests */,
 				6657C56F22C6CAFB002ADB41 /* libcolorpicker_jailbreak_tests */,
 			);
@@ -366,10 +375,11 @@
 			isa = PBXGroup;
 			children = (
 				6657C54422C53656002ADB41 /* Public Headers */,
-				66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.mm */,
+				66ACAC3C22C3BA7700B5C2B3 /* libcolorpicker.m */,
 				66ACAC4522C3BA7700B5C2B3 /* PFColorAlert.h */,
 				66ACAC4222C3BA7700B5C2B3 /* PFColorAlert.m */,
 				6657C53322C451A1002ADB41 /* PFColorPickerDelegate.h */,
+				66E6E9CD22D53C5B00FA5D2B /* Models */,
 				6657C53F22C53573002ADB41 /* View Controllers */,
 				6657C54022C5359F002ADB41 /* Custom Views */,
 				6657C54122C535E9002ADB41 /* Table Cells */,
@@ -393,6 +403,15 @@
 				66ACAC7222C3BBB500B5C2B3 /* main.m */,
 			);
 			path = LCPExampleApp;
+			sourceTree = "<group>";
+		};
+		66E6E9CD22D53C5B00FA5D2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66E6E9C822D53C4E00FA5D2B /* PFColor.h */,
+				66E6E9C922D53C4E00FA5D2B /* PFColor.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		8B4E3A4FAC3BE0397205F5AA /* Pods */ = {
@@ -419,6 +438,7 @@
 				6657C53B22C45345002ADB41 /* PFColorPickerBaseViewController.h in Headers */,
 				6657C53422C451A1002ADB41 /* PFColorPickerDelegate.h in Headers */,
 				6657C53722C4531C002ADB41 /* PFColorPickerViewController.h in Headers */,
+				66E6E9CA22D53C4E00FA5D2B /* PFColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,11 +705,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6605990922C3C00100F97110 /* PFColorLiteSlider.m in Sources */,
+				66E6E9CC22D53C4E00FA5D2B /* PFColor.m in Sources */,
 				6605991022C3C01600F97110 /* PFSimpleLiteColorCell.mm in Sources */,
 				6605990F22C3C01300F97110 /* PFLiteColorCell.mm in Sources */,
 				6605990522C3BFEC00F97110 /* PFColorAlert.m in Sources */,
 				6657C53822C4531C002ADB41 /* PFColorPickerViewController.m in Sources */,
-				6605990422C3BFE500F97110 /* libcolorpicker.mm in Sources */,
+				6605990422C3BFE500F97110 /* libcolorpicker.m in Sources */,
 				6605990622C3BFEF00F97110 /* PFColorAlertViewController.m in Sources */,
 				6605990A22C3C00400F97110 /* PFColorPicker.m in Sources */,
 				6605990D22C3C00D00F97110 /* PFHaloHueView.m in Sources */,
@@ -707,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E6E9CF22D5494200FA5D2B /* PFColorTests.m in Sources */,
 				66AFF66022D4EF1200E9323F /* AppStoreTests.m in Sources */,
 				6657C54C22C547CA002ADB41 /* PublicTests.m in Sources */,
 			);
@@ -717,6 +739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F0BE3E22D4ED8B00A0DED2 /* JailbreakTests.m in Sources */,
+				66E6E9D022D54A7600FA5D2B /* PFColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +750,7 @@
 				66ACAC4E22C3BA7800B5C2B3 /* UIColor+PFColor.m in Sources */,
 				66ACAC5A22C3BA7800B5C2B3 /* PFColorTransparentView.m in Sources */,
 				66ACAC5922C3BA7800B5C2B3 /* PFColorLitePreviewView.m in Sources */,
+				66E6E9CB22D53C4E00FA5D2B /* PFColor.m in Sources */,
 				66ACAC5622C3BA7800B5C2B3 /* PFColorAlert.m in Sources */,
 				66ACAC4F22C3BA7800B5C2B3 /* PFColorAlertViewController.m in Sources */,
 				66ACAC5822C3BA7800B5C2B3 /* PFColorViewController.mm in Sources */,
@@ -734,7 +758,7 @@
 				66ACAC5522C3BA7800B5C2B3 /* PFColorLiteSlider.m in Sources */,
 				66ACAC5322C3BA7800B5C2B3 /* PFHaloHueView.m in Sources */,
 				66ACAC5B22C3BA7800B5C2B3 /* PFColorPicker.m in Sources */,
-				66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.mm in Sources */,
+				66ACAC5222C3BA7800B5C2B3 /* libcolorpicker.m in Sources */,
 				66ACAC5022C3BA7800B5C2B3 /* PFHaloKnobView.m in Sources */,
 				6657C53D22C45428002ADB41 /* PFColorPickerBaseViewController.m in Sources */,
 			);
