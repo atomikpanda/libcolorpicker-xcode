@@ -62,9 +62,8 @@
     self.style = s;
 
     self.slider = [[UISlider alloc] initForAutoLayout];
-    self.slider.minimumValue = 0.0000001f;
-    self.slider.maximumValue = 1.0;
-    
+    self.slider.minimumValue = 0.0f;
+    self.slider.maximumValue = 1.0f;
 
     self.backgroundView = [[PFColorSliderBackgroundView alloc] initWithFrame:frame color:c style:s];
 
