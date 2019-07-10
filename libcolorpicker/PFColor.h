@@ -50,6 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Readonly
 @property (nonatomic, copy, readonly) NSString *hexString;
+@property (nonatomic, copy, readonly) NSString *preferencesHexValue;
 @property (nonatomic, copy, readonly) UIColor *UIColor;
 @property (nonatomic, assign, readonly) CGColorRef CGColor;
 

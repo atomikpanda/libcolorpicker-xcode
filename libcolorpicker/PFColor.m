@@ -277,6 +277,10 @@ double fmin3(double x, double y, double z) {
             uppercaseString];
 }
 
+- (NSString *)preferencesHexValue {
+    return [self.hexString stringByAppendingFormat:@":%f", _alpha];
+}
+
 - (UIColor *)UIColor {
     return [UIColor colorWithRed:self.red green:self.green blue:self.blue alpha:self.alpha];
 }

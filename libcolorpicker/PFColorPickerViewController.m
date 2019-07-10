@@ -7,6 +7,7 @@
 //
 
 #import "PFColorPickerViewController.h"
+#import "PFColor.h"
 
 @interface PFColorPickerViewController ()
 
@@ -32,7 +33,7 @@
 
 - (void)doneTapped:(id)sender {
     if (_delegate) {
-        [_delegate colorPicker:self didFinishWithColor:[self getColor]];
+        [_delegate colorPicker:self didFinishWithColor:self.color.UIColor];
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }

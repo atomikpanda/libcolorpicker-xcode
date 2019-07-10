@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "../libcolorpicker/libcolorpicker.h"
 #import "../libcolorpicker/PFColorPickerViewController.h"
+#import "../libcolorpicker/PFColor.h"
 
 @interface ViewController () <PFColorPickerDelegate>
 @property (nonatomic, strong) PFColorAlert *alert;
@@ -32,8 +33,9 @@
     [self.alert displayWithCompletion:
      ^void (UIColor *pickedColor) {
          // save pickedColor or do something with it
-         NSString *hexString = [UIColor hexFromColor:pickedColor];
-         hexString = [hexString stringByAppendingFormat:@":%f", pickedColor.alpha];
+         
+         NSString *hexString = [PFColor colorWithUIColor:pickedColor].preferencesHexValue;
+         NSLog(@"Picked color: %@", hexString);
          // you probably want to save hexString to your prefs
          // maybe post a notification here if you need to
      }];

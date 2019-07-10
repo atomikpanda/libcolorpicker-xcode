@@ -3,6 +3,7 @@
 #import "UIColor+PFColor.h"
 #import <objc/runtime.h>
 #import <PureLayout/PureLayout.h>
+#import "PFColor.h"
 
 
 @interface PFColorAlert()
@@ -109,7 +110,8 @@
         [self.darkeningWindow addGestureRecognizer:tapGesture];
 
         NSString *pasteboard = [UIPasteboard generalPasteboard].string;
-        if ([pasteboard isEqualToString:[[self.mainViewController getColor] hexFromColor]])
+        
+        if ([pasteboard isEqualToString:self.mainViewController.color.hexString])
             return;
         
         NSRange range = [pasteboard rangeOfString:@"^#(?:[0-9a-fA-F]{3}){1,2}$" options:NSRegularExpressionSearch];
@@ -138,7 +140,7 @@
         self.popWindow.alpha = 0.0f;
     } completion:^(BOOL finished) {
         if (self.completionBlock)
-            self.completionBlock([self.mainViewController getColor]);
+            self.completionBlock(self.mainViewController.color.UIColor);
 
         self.popWindow.hidden = YES;
         self.isOpen = NO;

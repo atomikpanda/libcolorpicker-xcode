@@ -12,6 +12,7 @@
 #import "PFColorLiteSlider.h"
 #import "UIColor+PFColor.h"
 #import <PureLayout/PureLayout.h>
+#import "PFColor.h"
 
 @interface PFColorPickerBaseViewController () <PFHaloHueViewDelegate> {
     PFHaloHueView *_haloView;
@@ -145,7 +146,7 @@ blurView=_blurView;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Hex Color" message:@"Enter a hex color or copy it to your pasteboard." preferredStyle:UIAlertControllerStyleAlert];
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.text = [UIColor hexFromColor:[self getColor]];
+        textField.text = self.color.hexString;
     }];
     
     // Set from hex color
@@ -155,13 +156,16 @@ blurView=_blurView;
         if (!textField) return;
         
         NSString *userHexString = textField.text;
-        if ([userHexString hasPrefix:@"#"] && [UIColor PF_colorWithHex:userHexString])
-            [self setPrimaryColor:[UIColor PF_colorWithHex:userHexString]];
+        PFColor *userColor = [PFColor colorWithHex:userHexString];
+        if (userColor) {
+            [self setPrimaryColor:userColor.UIColor];
+        }
+            
     }]];
     
     // Copy to pasteboard
     [alertController addAction:[UIAlertAction actionWithTitle:@"Copy" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[UIPasteboard generalPasteboard] setString:[UIColor hexFromColor:[self getColor]]];
+        [[UIPasteboard generalPasteboard] setString:self.color.hexString];
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
@@ -197,8 +201,8 @@ blurView=_blurView;
     [_haloView setValue:primary.hue];
 }
 
-- (UIColor *)getColor {
-    return _litePreviewView.mainColor;
+- (PFColor *)color {
+    return [PFColor colorWithUIColor:_litePreviewView.mainColor];
 }
 
 - (void)hueChanged:(float)hue {
@@ -230,11 +234,14 @@ blurView=_blurView;
 }
 
 - (void)presentPasteHexStringQuestion:(NSString *)pasteboard {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Detected pasted color" message:@"It seems like your pasteboard consists of a hex color. Would you like to use it?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Detected copied color" message:@"It seems like your pasteboard consists of a hex color. Would you like to use it?" preferredStyle:UIAlertControllerStyleAlert];
     
     // Set from hex color
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Use pasteboard" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self setPrimaryColor:[UIColor PF_colorWithHex:pasteboard]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Use Pasteboard" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        PFColor *userColor = [PFColor colorWithHex:pasteboard];
+        if (userColor) {
+            [self setPrimaryColor:userColor.UIColor];
+        }
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil]];

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "../libcolorpicker/libcolorpicker.h"
+#import "../libcolorpicker/UIColor+PFColor.h"
 
 // These tests should test that all public APIs in libcolorpicker.h
 // are working as intended.
