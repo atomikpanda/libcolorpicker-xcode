@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 // NOTE: might want to remove this if check later
-#ifdef JAILBREAK
+//#ifdef JAILBREAK
 @interface PFLiteColorCell : UITableViewCell
 - (id)initWithStyle:(long long)style reuseIdentifier:(id)identifier specifier:(id)specifier;
 - (UIColor *)previewColor; // this will be used for the circle preview view. override in a subclass
@@ -35,4 +35,4 @@ NS_ASSUME_NONNULL_END
 
 @interface PFSimpleLiteColorCell : PFLiteColorCell
 @end
-#endif
+//#endif

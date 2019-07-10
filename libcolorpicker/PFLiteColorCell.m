@@ -35,6 +35,7 @@ static void PFLiteColorCellNotifCB(CFNotificationCenterRef center, void *observe
 
 CHDeclareClass(PSTableCell);
 CHDeclareClass(PFLiteColorCell);
+CHDeclareClass(PFSimpleLiteColorCell)
 
 CHMethod(0, UIColor *, PFLiteColorCell, previewColor) {
     return [UIColor cyanColor];
@@ -78,11 +79,39 @@ CHMethod(0, void, PFLiteColorCell, didMoveToSuperview) {
 //    CFNotificationCenterRemoveEveryObserver(CFNotificationCenterGetDarwinNotifyCenter(), (void *)self);
 //}
 
-CHPropertyRetainNonatomic(PFLiteColorCell, UIView *, colorPreview, setColorPreview);
+//CHPropertyRetainNonatomic(PFLiteColorCell, UIView *, colorPreview, setColorPreview);
+CHMethod(1, void, PFLiteColorCell, setColorPreview, UIView *, view) {
+     objc_setAssociatedObject(self, @selector(colorPreview), view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+CHMethod(0, UIView *, PFLiteColorCell, colorPreview) {
+     return (UIView *)objc_getAssociatedObject(self, @selector(colorPreview));
+}
+
+#include "PFSimpleLiteColorCell.m"
 
 CHConstructor {
-    dlopen("/System/Library/PrivateFrameworks/Preferences.framework", RTLD_NOW);
+    dlopen("/System/Library/PrivateFrameworks/Preferences.framework/Preferences", RTLD_NOW);
     CHLoadLateClass(PSTableCell);
-    CHRegisterClass(PFLiteColorCell, PSTableCell);
+    CHRegisterClass(PFLiteColorCell, PSTableCell) {
+        CHHook(0, PFLiteColorCell, previewColor);
+        CHHook(0, PFLiteColorCell, updateCellDisplay);
+        CHHook(0, PFLiteColorCell, didMoveToSuperview);
+        CHHook(1, PFLiteColorCell, setColorPreview);
+        CHHook(0, PFLiteColorCell, colorPreview);
+    }
+    
+    CHLoadLateClass(PFLiteColorCell);
+    CHRegisterClass(PFSimpleLiteColorCell, PFLiteColorCell) {
+        CHHook(3, PFSimpleLiteColorCell, initWithStyle, reuseIdentifier, specifier);
+        CHHook(0, PFSimpleLiteColorCell, setLCPOptions);
+        CHHook(0, PFSimpleLiteColorCell, previewColor);
+        CHHook(0, PFSimpleLiteColorCell, didMoveToSuperview);
+        CHHook(0, PFSimpleLiteColorCell, openColorAlert);
+        CHHook(0, PFSimpleLiteColorCell, action);
+        CHHook(0, PFSimpleLiteColorCell, target);
+        CHHook(0, PFSimpleLiteColorCell, cellAction);
+        CHHook(0, PFSimpleLiteColorCell, cellTarget);
+    }
 }
 
