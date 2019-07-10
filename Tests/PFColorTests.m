@@ -24,9 +24,43 @@
 }
 
 - (void)testPFColor {
-    PFColor *color = [[PFColor alloc] initWithHex:@"#ff0000"];
-    XCTAssertEqualObjects([color hexString], @"#FF0000");
+    PFColor *color = [[PFColor alloc] initWithHex:@"#8c738c"];
+    XCTAssertEqualObjects([color hexString], @"#8C738C");
     
+    NSLog(@"ORIG COLOR: %@", color);
+    
+    CGFloat origRed, origGreen, origBlue, origAlpha;
+    
+    origRed = color.red;
+    origGreen = color.green;
+    origBlue = color.blue;
+    origAlpha = color.alpha;
+    
+    CGFloat origH, origS, origB;
+    
+    origH = color.hue;
+    origS = color.saturation;
+    origB = color.brightness;
+    NSLog(@"hue: %g", color.hue);
+    NSLog(@"saturation: %g", color.saturation);
+    NSLog(@"brightness: %g", color.brightness);
+    
+    [color setValuesFromHex:@"#5fba7d"];
+    
+    NSLog(@"TEST HEX: %@", color);
+
+    [color setHue:origH];
+    XCTAssertEqual(origH, color.hue);
+    
+    [color setSaturation:origS];
+    XCTAssertEqualWithAccuracy(origS, color.saturation, 0.0000001);
+    
+    [color setBrightness:origB];
+    XCTAssertEqual(origB, color.brightness);
+    
+    NSLog(@"hue: %g", color.hue);
+    
+    NSLog(@"NEW COLOR: %@", color);
 }
 
 - (void)testPerformanceExample {

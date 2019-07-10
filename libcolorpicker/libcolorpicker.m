@@ -121,9 +121,8 @@ UIColor *_LCPParseHex(NSString *stringContainingHex) {
 }
 
 UIColor *LCPParseColorString(NSString *colorStringFromPrefs, NSString *colorStringFallback) {
-    UIColor *color = _LCPParseHex(colorStringFromPrefs);
-    if (!color)
-        color = _LCPParseHex(colorStringFallback);
-    
-    return color;
+    PFColor *fallbackColor = [PFColor colorWithHex:colorStringFallback];
+    NSCAssert(fallbackColor != nil, @"Fallback color must not be nil.");
+    PFColor *color = [PFColor colorWithHex:colorStringFromPrefs fallbackColor:fallbackColor];
+    return color.UIColor;
 }

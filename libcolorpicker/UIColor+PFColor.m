@@ -8,6 +8,7 @@
 
 #import "UIColor+PFColor.h"
 #import <UIKit/UIKit.h>
+#import "PFColor.h"
 
 #ifdef __cplusplus /* If this is a C++ compiler, use C linkage */
 extern "C" {
@@ -30,11 +31,7 @@ UIColor *colorFromHex(NSString *hexString);
 }
 
 - (NSString *)hexFromColor {
-    const CGFloat *components = CGColorGetComponents(self.CGColor);
-    CGFloat r = components[0];
-    CGFloat g = components[1];
-    CGFloat b = components[2];
-    return [NSString stringWithFormat:@"#%02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
+    return [PFColor colorWithUIColor:self].hexString;
 }
 
 #pragma mark Components
